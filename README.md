@@ -71,3 +71,67 @@ Currently the newsletter is generated via a tool which deals with publishing the
 }
 
 ```
+
+The rendered newsletter can be [found here](https://campaigns.endjin.com/t/ViewEmailArchive/t/D2371CB2A187A272/C67FD2F38AC4859C/).
+
+The aim is to try and generate a blog like site that contains a ToC of the editions of the newsletter then a page with the actual content. The content of this can be generated from the Newsletter.NewsletterItems collection in the JSON document.
+
+I've created two modules which can either process a directory full of editions in JSON format, or a single edition:
+
+``` csharp
+public class NewsTopicsModule : IModule
+{
+    private string newscollectionsFilePath;
+
+    public NewsTopicsModule(string newscollectionsFilePath)
+    {
+        this.newscollectionsFilePath = newscollectionsFilePath;
+    }
+
+    public IEnumerable<IDocument> Execute(IReadOnlyList<IDocument> inputs, IExecutionContext context)
+    {
+        foreach (var filePath in Directory.EnumerateFiles(this.newscollectionsFilePath))
+        {
+            var newscollection = JsonConvert.DeserializeObject<NewsCollection>(File.ReadAllText(filePath));
+
+            var metadata = new List<KeyValuePair<string, object>>
+            {
+                new KeyValuePair<string, object>("NewsletterContent", newscollection.Newsletter),
+                new KeyValuePair<string, object>("NewsletterFrom", newscollection.FromDate),
+                new KeyValuePair<string, object>("NewsletterTo", newscollection.ToDate)
+            };
+
+            yield return context.GetDocument(metadata);
+        }
+    }
+}
+```
+
+and 
+
+```csharp
+public class NewsTopicModule : IModule
+{
+    private string newscollectionFilePath;
+
+    public NewsTopicModule(string newscollectionFilePath)
+    {
+        this.newscollectionFilePath = newscollectionFilePath;
+    }
+
+    public IEnumerable<IDocument> Execute(IReadOnlyList<IDocument> inputs, IExecutionContext context)
+    {
+        var newscollection = JsonConvert.DeserializeObject<NewsCollection>(File.ReadAllText(this.newscollectionFilePath));
+
+        var metadata = new List<KeyValuePair<string, object>>
+        {
+            new KeyValuePair<string, object>("NewsletterContent", newscollection.Newsletter),
+            new KeyValuePair<string, object>("NewsletterFrom", newscollection.FromDate),
+            new KeyValuePair<string, object>("NewsletterTo", newscollection.ToDate)
+        };
+
+        yield return context.GetDocument(metadata);
+    }
+}
+
+```

@@ -1,0 +1,16 @@
+#n Wyam.Razor
+
+#a "..\Solutions\Endjin.AzureWeekly.Wyam\bin\Debug\netstandard2.0\Endjin.AzureWeekly.WyamModules.dll"
+
+#theme AzureWeekly
+
+// Customize your settings and add new ones here
+Settings[Keys.Host] = "AzureWeekly.info";
+
+string newscollectionFilePath = @"..\Artefacts\NewsletterCollections\168.json";
+
+Pipelines.Add(
+    "Newsletter",
+    NewsTopicModule(newscollectionFilePath),
+    Razor(),
+    WriteFiles());
