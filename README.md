@@ -135,3 +135,11 @@ public class NewsTopicModule : IModule
 }
 
 ```
+
+My example config file is in the `Wyam` directory. You will need to build the `Endjin.AzureWeekly.WyamModules` solution for the path reference inside the config to work.
+
+I think I have the custom modules working correctly. I thought the [Contentful example](https://www.contentful.com/blog/2017/03/07/contentful-loves-wyam/)  was very useful.
+
+No Matter what I try, I don't seem to be able to apply the theme / access the data that is in the metadata and render it out.
+
+I also don't understand how I would generate many files vs a single file.
