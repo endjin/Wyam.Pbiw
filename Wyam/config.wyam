@@ -12,5 +12,5 @@ string newscollectionFilePath = @"..\Artefacts\NewsletterCollections\168.json";
 Pipelines.Add(
     "Newsletter",
     NewsTopicModule(newscollectionFilePath),
-    Razor(),
-    WriteFiles());
+    Razor().WithLayout("/_Index.cshtml"),
+    WriteFiles((doc, ctx) => doc.Get<DateTime>("NewsletterFrom").ToString("yyyyMMdd") + ".html"));
