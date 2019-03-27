@@ -330,5 +330,5 @@ ASALocalRun/
 .mfractor/
 
 # Ignore the Wyam files
-output/*
+Wyam/output/*
 config.wyam.*
