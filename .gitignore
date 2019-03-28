@@ -332,3 +332,4 @@ ASALocalRun/
 # Ignore the Wyam files
 Wyam/output/*
 config.wyam.*
+Wyam/package-lock.json

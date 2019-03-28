@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Weekly Newsletter - a free weekly round up of all things Power BI</title>
+    <environment include="Development">
+        <link rel="stylesheet" href="@Context.GetLink("/assets/lib/bootstrap/dist/css/bootstrap.css")" />
+        <link rel="stylesheet" href="@Context.GetLink("/assets/css/site.css")" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="@Context.GetLink("/assets/lib/bootstrap/dist/css/bootstrap.min.css")"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="@Context.GetLink("/assets/css/site.min.css")" asp-append-version="true" />
+    </environment>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-20526563-9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-20526563-9');
+    </script>
+    <meta property="og:title" content="Power BI Weekly" />
+    <meta property="og:site_name" content="Power BI Weekly" />
+    <meta property="og:url" content="http://powerbiweekly.info/" />
+    <meta property="og:description" content="Sign up for the Power BI Weekly Newsletter. Read the latest news from the Power BI community, powered by endjin." />
+    <meta property="og:image" content="@Context.GetLink("/assets/images/powerbiweekly-opengraph-endjin.png")" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="&#64;powerbiweekly" />
+    <meta name="twitter:creator" content="&#64;endjin" />
+</head>
+
+<body>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <footer>
+        <div class="footer container-fluid">
+            <div class="row">
+                <div class="container">
+                    <div class="about-endjin">
+                        <div class="row"><h2>Power BI Weekly</h2><p>is written and compiled by</p></div>
+                        <div class="row"><a href="http://endjin.com"><img class="endjin-logo" src="@Context.GetLink("/assets/images/endjin_ltsolo_mid_blk.svg")" /></a></div>
+                        <div class="row powerbi-partner"><h3>A Power BI Partner</h3></div>
+                        <div class="row"> <img class="ms-comps" src="@Context.GetLink("/assets/images/endjin-gold-comp-x4-blk.svg")" /></div>
+                        <div class="row"> <p>&copy; @DateTime.Now.Year - <a href="http://endjin.com"><strong>endjin</strong></a></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Twitter single-event website tag code -->
+    <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+    <script type="text/javascript">twttr.conversion.trackPid('nxh4r', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nxh4r&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+        <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nxh4r&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+    </noscript>
+    <!-- End Twitter single-event website tag code -->
+
+    <environment include="Development">
+        <script src="@Context.GetLink("/assets/lib/jquery/dist/jquery.js")"></script>
+        <script src="@Context.GetLink("/assets/lib/bootstrap/dist/js/bootstrap.js")"></script>
+        <script src="@Context.GetLink("/assets/js/site.js")" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="@Context.GetLink("/assets/lib/jquery/dist/jquery.min.js")"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="@Context.GetLink("/assets/lib/bootstrap/dist/js/bootstrap.min.js")"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="@Context.GetLink("/assets/js/site.min.js")" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

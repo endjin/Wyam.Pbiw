@@ -1,0 +1,516 @@
+@font-face {
+    font-family: 'socialfont';
+    src: url('../fonts/socialfont.eot?78724934');
+    src: url('../fonts/socialfont.eot?78724934#iefix') format('embedded-opentype'), url('../fonts/socialfont.woff?78724934') format('woff'), url('../fonts/socialfont.ttf?78724934') format('truetype'), url('../fonts/socialfont.svg?78724934#socialfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    width: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 0;
+    width: 100%;
+    color: #000;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 50px;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.7;
+}
+
+a {
+    color: #000;
+    font-weight: 700;
+}
+
+    a:hover {
+        color: rgba(50, 50, 50, 0.5)
+    }
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 50px;
+}
+
+.content2 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.register {
+    background-color: #1c1e21;
+    padding: 15px;
+}
+
+    .register .form-inline {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .register .form-control {
+        border-radius: 0;
+        width: 500px;
+        padding: 0 12px;
+        max-width: 100%;
+    }
+
+    .register .btn {
+        border-radius: 0;
+        background-color: #f2c811;
+        border-color: #f2c811;
+        font-weight: 700;
+    }
+
+    .register.powered-by {
+        padding: 9px 5px 3px;
+        text-align: center;
+        margin: 0 auto;
+        color: #fff;
+    }
+
+        .register.powered-by a {
+            color: #fff;
+        }
+
+.container .jumbotron {
+    height: 100%;
+    width: 100%;
+    padding: 0 15px 30px;
+    border-radius: 0;
+    text-align: center;
+}
+
+.jumbotron {
+    background-image: url('../images/Power-BI-Bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+    .jumbotron h1 {
+        font-weight: 700;
+    }
+
+    .jumbotron .article {
+        width: 55em;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .jumbotron p {
+        font-weight: 400;
+        margin-bottom: 15px;
+        line-height: 1.7;
+    }
+
+.powerbi-logo {
+    width: 18%;
+}
+
+    .powerbi-logo .cls-1 {
+        fill: #000;
+    }
+
+.content2 h2 {
+    text-align: center;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: 'socialfont';
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+}
+
+.icon-twitter:before {
+    content: '\43';
+    font-size: 150%;
+}
+
+.social-nav {
+    padding-top: 20px;
+    margin-bottom: 35px;
+    padding-right: 30px;
+}
+
+.social-links ul {
+    list-style: none;
+    padding-right: 0;
+    margin: 0;
+}
+
+.social-links li {
+    float: right;
+    display: inline-block;
+}
+
+.social-links a {
+    font-family: 'socialfont';
+    display: block;
+    height: 21px;
+    width: 20px;
+    margin-left: 10px;
+    color: #000;
+    font-size: 20px;
+}
+
+    .social-links a:hover,
+    .social-links a:focus {
+        color: rgba(5, 51, 51, 0.5);
+        text-decoration: none;
+    }
+
+.contribute {
+    margin-top: 2em;
+    text-align: center;
+}
+
+    .contribute p {
+        width: 40em;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+.archive {
+    margin: 1em auto 0;
+    text-align: center;
+}
+
+    .archive ul {
+        -moz-column-count: 2;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 10px;
+        column-count: 2;
+        column-gap: 10px;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .archive li {
+        font-weight: 500;
+    }
+
+.latest ul li:nth-of-type(1n+4) {
+    display: none;
+}
+
+.archive.latest ul {
+    margin: 10px 30px;
+    -moz-column-count: 1;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 1;
+    -webkit-column-gap: 10px;
+    column-count: 1;
+    column-gap: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.latest ul li:before,
+.latest ul li::before {
+   
+}
+
+.latest li {
+    background-color: #f2c811;
+    padding: 30px;
+    margin: 20px 0;
+}
+
+    .latest li a {
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+.latest .lead-card h3,
+.latest .excerpt p {
+    text-align: center;
+    position: static;
+}
+
+.copy {
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 1.3em;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -480px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+footer {
+    height: 480px;
+}
+
+footer {
+    padding-top: -480px;
+    background-image: url('../images/Power-BI-Bg-180.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer p,
+.footer a,
+.footer h2 {
+    color: #000;
+}
+
+.footer p {
+    word-wrap: normal;
+}
+
+.footer .endjin-logo {
+    margin-top: 15px;
+    width: 200px;
+    margin-bottom: 0;
+}
+
+footer .powerbi-partner h3 {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.footer .ms-comps {
+    width: 220px;
+    margin: 20px 0 30px;
+}
+
+.footer .about-endjin {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* This is a magic media query designed to do auto-resizing on the 
+   no-stage image once it reaches a size smaller than its natural width
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+@media (max-width: 767px) {
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .form-inline .form-group {
+        display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+
+    .register .form-group {
+        margin-bottom: 0;
+    }
+
+    .register .form-control {
+        width: 380px;
+    }
+
+    .jumbotron .article {
+        width: 30em;
+    }
+
+    .jumbotron p {
+        font-size: 16px;
+    }
+
+    .jumbotron h1, h1 {
+        font-size: 32px;
+    }
+
+    .archive ul {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+
+    .mspartner img {
+        width: 75%;
+    }
+
+    .mspartner {
+        margin-top: 30px;
+        padding-left: 27px;
+        padding-bottom: 20px;
+    }
+
+    .powerbi-logo {
+        width: 225px;
+    }
+
+    .endjin-logo {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .register .form-inline .form-group {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        align-items: stretch;
+    }
+
+    .register .form-control {
+        width: 100%;
+        margin: 0 15px;
+        text-align: center;
+    }
+
+    .register .btn {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .jumbotron h1, h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .powerbi-logo {
+        width: 190px;
+    }
+
+    .contribute p {
+        width: 15em;
+    }
+
+    .endjin-logo {
+        width: 145px;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    .archive.latest ul {
+        margin: 20px 30px;
+        -moz-column-count: 3;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 3;
+        -webkit-column-gap: 10px;
+        column-count: 3;
+        column-gap: 10px;
+    }
+    
+    .latest li {
+        margin: 0;
+    }
+    
+    .mspartner {
+        padding-left: 27px;
+        padding-bottom: 20px;
+    }
+
+    .powerbi-logo {
+        width: 225px;
+    }
+
+    .endjin-logo {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    .archive ul {
+        -moz-column-count: 2;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 10px;
+        column-count: 2;
+        column-gap: 10px;
+    }
+
+    .jumbotron .article {
+        width: 55em;
+    }
+
+    .powerbi-logo {
+        width: 275px;
+    }
+
+    .endjin-logo {
+        width: 175px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    .archive ul {
+        -moz-column-count: 3;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 3;
+        -webkit-column-gap: 10px;
+        column-count: 3;
+        column-gap: 10px;
+    }
+
+    .mspartner {
+        padding-top: 6px;
+    }
+}

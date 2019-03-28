@@ -2,15 +2,15 @@
 
 #a "..\Solutions\Endjin.AzureWeekly.Wyam\bin\Debug\netstandard2.0\Endjin.AzureWeekly.WyamModules.dll"
 
-#theme AzureWeekly
+#theme PowerBIWeekly
 
 // Customize your settings and add new ones here
-Settings[Keys.Host] = "AzureWeekly.info";
+Settings[Keys.Host] = "PowerBIWeekly.info";
 
 string newscollectionFilePath = @"..\Artefacts\NewsletterCollections\168.json";
 
 Pipelines.Add(
     "Newsletter",
     NewsTopicModule(newscollectionFilePath),
-    Razor().WithLayout("/_Index.cshtml"),
-    WriteFiles((doc, ctx) => doc.Get<DateTime>("NewsletterFrom").ToString("yyyyMMdd") + ".html"));
+    Razor().WithLayout("/PowerBIWeekly/_Layout.cshtml"),
+    WriteFiles((doc, ctx) => doc.Get<DateTimeOffset>("NewsletterFrom").ToString("yyyy-MM-dd") + "-issue-" + doc.Get<Newsletter>("NewsletterContent").IssueNumber + ".html"));

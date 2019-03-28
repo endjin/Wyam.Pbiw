@@ -1,5 +1,0 @@
-@using Endjin.AzureWeekly.WyamModules;
-
-@Html.Raw(Model.Get<Newsletter>("NewsletterContent").IssueNumber + ": " + Model.Get("NewsletterTo") + " - " + Model.Get("NewsletterFrom"))
-
-@RenderBody()
