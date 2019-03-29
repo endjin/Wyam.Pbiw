@@ -1,0 +1,1401 @@
+{
+  "Issue": 206,
+  "Editorial": "<p>Happy New Year to all Azure Weekly Subscribers! After a short break over the festive, period we're back and ready to take on 2019! <br><br>In 2018 we published 49 issues and the readership grew by 30%. The amount of content being produced on a weekly basis shows that Azure has gained widespread adoption and the momentum from Microsoft has increased to an eye watering level.&nbsp;<br><br>It was also an amazing year for <a href=\"https://endjin.com/\" data-mce-href=\"https://endjin.com/\">endjin</a>; we grew the team by 60% and doubled revenues. We built a number of <a href=\"https://endjin.com/solutions/modern-data-platform\" data-mce-href=\"https://endjin.com/solutions/modern-data-platform\">modern data platforms</a> using everything from Data Lake, to Cosmos DB, Azure Analysis Services, Data Science Virtual Machines and <a href=\"https://github.com/dotnet/machinelearning/issues/563\" data-mce-href=\"https://github.com/dotnet/machinelearning/issues/563\">ML.NET</a>. We finally had a Microsoft case study published about the fascinating work we did to help <a href=\"https://customers.microsoft.com/en-us/story/talktalk\" data-mce-href=\"https://customers.microsoft.com/en-us/story/talktalk\">TalkTalk in their&nbsp; journey to Azure</a> including the Machine Learning powered Anomaly Detection platform and Data Lake reference archictecture we created. More on these topics soon! We've built a Data Governance Platform to help organisations manage their Data Lakes, which we hope to launch early in 2019, and we created an OpenAPI framework built on top of Azure Functions v2 for easy development of low cost, highly scalable Restful APIs, which we're hoping to open source soon. Amazingly, this only scratches the surface... In short, I really need to start blogging more in 2019!<br><br>We wanted to give back to the community in 2018 and sponsored \"free to attend events\" including dev:east, SQLGLA, SQL Saturday, dotnetsheff, DDD Scotland, DDD Wales, DDD South West, DDD East Anglia and DDD Reading, we also did talks at many of these events as well as .NET User Groups around the UK. We're hoping to do more of this in 2019 too.</p><p>I've spent a lot of the last 18 months researching large scale event processing from both a technology and an (water &amp; telco) industry perspective. High-density reactive processing of events is going to be huge in this area; so I was suprised that the announcement that <a href=\"https://azure.microsoft.com/en-us/blog/microsoft-open-sources-trill-to-deliver-insights-on-a-trillion-events-a-day/\" data-mce-href=\"https://azure.microsoft.com/en-us/blog/microsoft-open-sources-trill-to-deliver-insights-on-a-trillion-events-a-day/\">Microsoft open sourced Trill to deliver insights on a trillion events a day</a> seemed to go unnoticed in the lull before Christmas. It is a fascinating example of how Microsoft is converting investments in pure research into innovative new cloud services.</p><p>Here are the (rather numerous) announcements and updates since our last issue:</p><ul><li><a href=\"https://azure.microsoft.com/en-us/updates/azure-service-bus-and-azure-event-hubs-virtual-networks-and-firewall-rules-are-now-generally-available/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-service-bus-and-azure-event-hubs-virtual-networks-and-firewall-rules-are-now-generally-available/\">Azure Service Bus and Azure Event Hubs Virtual Networks and Firewall rules are now generally available</a></li><li><a href=\"https://azure.microsoft.com/en-us/updates/dev-test-pricing-for-azure-sql-database-managed-instance-is-now-available/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/dev-test-pricing-for-azure-sql-database-managed-instance-is-now-available/\">Dev/test pricing for Azure SQL Database Managed Instance is now available</a></li><li><a href=\"https://blogs.msdn.microsoft.com/vsappcenter/cheers-to-new-codepush-features/\" data-mce-href=\"https://blogs.msdn.microsoft.com/vsappcenter/cheers-to-new-codepush-features/\">Cheers to New CodePush Features</a></li><li><a href=\"https://azure.microsoft.com/en-us/updates/azure-scheduler-will-retire-on-september-30-2019/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-scheduler-will-retire-on-september-30-2019/\">Azure Scheduler will retire on September 30, 2019</a></li><li><a href=\"https://azure.microsoft.com/en-us/updates/azure-devtest-labs-cis-windows-server-2016-benchmark-l2-available-in-your-lab/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-devtest-labs-cis-windows-server-2016-benchmark-l2-available-in-your-lab/\">Azure DevTest Labs: CIS Windows Server 2016 Benchmark L2 available in your lab</a></li><li><a href=\"https://azure.microsoft.com/blog/virtual-network-service-endpoints-for-serverless-messaging-and-big-data/\" data-mce-href=\"https://azure.microsoft.com/blog/virtual-network-service-endpoints-for-serverless-messaging-and-big-data/\">Virtual Network Service Endpoints for serverless messaging and big data generally available</a></li><li><a href=\"https://azure.microsoft.com/blog/announcing-transparent-data-encryption-tde-with-customer-managed-keys-for-managed-instance/\" data-mce-href=\"https://azure.microsoft.com/blog/announcing-transparent-data-encryption-tde-with-customer-managed-keys-for-managed-instance/\">Transparent Data Encryption TDE with customer managed keys for Managed Instance</a></li><li><a href=\"https://azure.microsoft.com/en-us/updates/azure-cosmos-db-emulator-support-for-cassandra-api/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-cosmos-db-emulator-support-for-cassandra-api/\">Azure Cosmos DB emulator support for Cassandra API</a></li><li><a href=\"https://azure.microsoft.com/en-us/updates/self-service-big-data-prep-dataflows-now-available-in-power-bi-embedded/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/self-service-big-data-prep-dataflows-now-available-in-power-bi-embedded/\">Self-service big data prep dataflows available in Power BI Embedded</a></li><li><a href=\"https://azure.microsoft.com/en-us/updates/power-bi-service-december-update/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/power-bi-service-december-update/\">Power BI service December update</a></li><li><a href=\"https://blogs.msdn.microsoft.com/charles_sterling/2018/12/19/the-power-bi-world-tour-is-back-in-2019-as-the-power-platform-world-tour/\" data-mce-href=\"https://blogs.msdn.microsoft.com/charles_sterling/2018/12/19/the-power-bi-world-tour-is-back-in-2019-as-the-power-platform-world-tour/\">The Power BI World Tour is back in 2019 as the Power Platform World Tour!</a></li><li><a href=\"https://azure.microsoft.com/blog/azure-powershell-az-module-version-1/\" data-mce-href=\"https://azure.microsoft.com/blog/azure-powershell-az-module-version-1/\">Azure PowerShell Az Module version 1.0</a></li><li><a href=\"https://azure.microsoft.com/en-us/updates/azure-log-analytics-is-available-in-west-us-2/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-log-analytics-is-available-in-west-us-2/\">Azure Log Analytics is available in West US 2</a></li><li><a href=\"https://azure.microsoft.com/en-us/updates/azure-kubernetes-service-december-update/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-kubernetes-service-december-update/\">Azure Kubernetes Service December Update</a></li><li><a href=\"https://blogs.msdn.microsoft.com/premier_developer/2018/12/30/resolve-to-be-a-learn-it-all-with-new-azure-certifications/\" data-mce-href=\"https://blogs.msdn.microsoft.com/premier_developer/2018/12/30/resolve-to-be-a-learn-it-all-with-new-azure-certifications/\">Resolve to be a \"learn it all\" with new Azure Certifications!</a></li><li><a href=\"https://azure.microsoft.com/blog/azure-marketplace-new-offers-volume-28/\" data-mce-href=\"https://azure.microsoft.com/blog/azure-marketplace-new-offers-volume-28/\">Azure Marketplace new offers</a></li><li><a href=\"https://azure.microsoft.com/en-us/updates/iot-edge1-0-5/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/iot-edge1-0-5/\">Azure IoT Edge 1.0.5 release</a></li><li><a href=\"https://azure.microsoft.com/en-us/updates/premium-tier-now-available-for-the-azure-database-migration-service/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/premium-tier-now-available-for-the-azure-database-migration-service/\">Premium tier now available for the Azure Database Migration Service</a></li><li><a href=\"https://azure.microsoft.com/en-us/updates/support-for-sql-to-azure-sql-db-managed-instance-online-migrations-2/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/support-for-sql-to-azure-sql-db-managed-instance-online-migrations-2/\">Support for SQL to Azure SQL DB Managed Instance online migrations</a></li><li><a href=\"https://azure.microsoft.com/en-us/updates/migrating-to-az-apimanagement-powershell-module/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/migrating-to-az-apimanagement-powershell-module/\">Migrating to the Az.ApiManagement PowerShell module</a></li><li><a href=\"https://blogs.msdn.microsoft.com/datamigration/2018/12/21/announcing-general-availability-of-azure-database-migration-service-dms-premium-tier/\" data-mce-href=\"https://blogs.msdn.microsoft.com/datamigration/2018/12/21/announcing-general-availability-of-azure-database-migration-service-dms-premium-tier/\">General Availability of Azure Database Migration Service DMS Premium Tier</a></li><li><a href=\"https://blogs.technet.microsoft.com/stbnewsbytes/2018/12/19/cloud-platform-release-announcement-for-december-19-2018/\" data-mce-href=\"https://blogs.technet.microsoft.com/stbnewsbytes/2018/12/19/cloud-platform-release-announcement-for-december-19-2018/\">Cloud Platform Release Announcement for December 19, 2018</a></li><li><a href=\"https://azure.microsoft.com/en-us/updates/azure-api-management-update-dec-28-2018/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-api-management-update-dec-28-2018/\">Azure API Management update from December 20th</a></li><li><a href=\"https://azure.microsoft.com/en-us/updates/azuremigrate-supports-azuregov/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azuremigrate-supports-azuregov/\">Azure Migrate is now available in Azure Government</a></li><li><a href=\"http://feedproxy.google.com/~r/soundcode/~3/v52Kq5I6ujo/migrating-to-new-servicebus-sdk\" data-mce-href=\"http://feedproxy.google.com/~r/soundcode/~3/v52Kq5I6ujo/migrating-to-new-servicebus-sdk\">Migrating to the New Azure Service Bus SDK</a></li><li><a href=\"https://azure.microsoft.com/en-us/blog/conversational-ai-updates-december-2018/\" data-mce-href=\"https://azure.microsoft.com/en-us/blog/conversational-ai-updates-december-2018/\">AI updates from December 2018</a></li></ul><p>The new year is a time for reflection, and there's a lot of 2018 to reflect upon! Here are a few blogs which showcase the highlights of the past year:</p><ul><li><a href=\"https://powerbi.microsoft.com/en-us/blog/happy-new-year-from-power-bi-desktop-2/\" data-mce-href=\"https://powerbi.microsoft.com/en-us/blog/happy-new-year-from-power-bi-desktop-2/\">Happy New Year from Power BI Desktop!</a></li><li><a href=\"https://blogs.technet.microsoft.com/system_center_in_action/2018/12/20/new-year-new-plans/\" data-mce-href=\"https://blogs.technet.microsoft.com/system_center_in_action/2018/12/20/new-year-new-plans/\">New Year. New Plans</a></li><li><a href=\"https://blogs.msdn.microsoft.com/vsappcenter/a-year-in-visual-studio-app-center-test/\" data-mce-href=\"https://blogs.msdn.microsoft.com/vsappcenter/a-year-in-visual-studio-app-center-test/\">A Year in Visual Studio App Center Test</a></li><li><a href=\"https://azure.microsoft.com/en-us/blog/the-biggest-iot-stories-of-2018/\" data-mce-href=\"https://azure.microsoft.com/en-us/blog/the-biggest-iot-stories-of-2018/\">The biggest IoT stories of 2018</a></li><li><a href=\"https://blogs.technet.microsoft.com/yuridiogenes/2018/12/31/2018-azure-securty-center-year-in-review/\" data-mce-href=\"https://blogs.technet.microsoft.com/yuridiogenes/2018/12/31/2018-azure-securty-center-year-in-review/\">2018: Azure Security Center Year in Review</a></li></ul><p>But it is also a time to look forward, so here's to another year of innovation&nbsp;in&nbsp;all things Azure... We're excited to discover&nbsp;what this year may bring!</p>",
+  "FromDate": "2018-12-15T09:59:24.225+00:00",
+  "ToDate": "2019-01-06T09:59:24.225+00:00",
+  "Groups": [
+    {
+      "Description": "Azure Batch AI, Azure Bot Service, Microsoft Genomics, Machine Learning services, Machine Learning Studio, Cognitive Services, Bing APIs, Computer Vision API, Content moderator, Custom Services, Emotion API, Face API, Language Understanding (LUIS), Linguistic Analysis API, QnA Maker API, Speaker Recognition API, Text Analytics API, Translator Speech API, Translator Text API, Web Language Model API",
+      "Id": "c6fc5c4d-a112-4ce9-b5a1-d4e77986620e",
+      "Items": [
+        {
+          "Content": "On the Azure podcast, Russell Young (<a href=\"https://twitter.com/youngr6\" data-mce-href=\"https://twitter.com/youngr6\">@youngr6</a>) presents <a href=\"http://azpodcast.azurewebsites.net/post/Episode-259-AI-and-Hacks-Tales-from-the-real-world\" data-mce-href=\"http://azpodcast.azurewebsites.net/post/Episode-259-AI-and-Hacks-Tales-from-the-real-world\">Episode 259 - AI and Hacks - Tales from the real world</a>",
+          "Id": "7a1bd8dc-e58a-4cbb-891b-8bc87ddaea45",
+          "Position": 0
+        },
+        {
+          "Content": "On the Revolution Analytics blog, David Smith (<a href=\"https://twitter.com/revodavid\" data-mce-href=\"https://twitter.com/revodavid\">@revodavid</a>) highlights his <a href=\"https://blog.revolutionanalytics.com/2019/01/notebooks-from-the-practical-ai-workshop.html\" data-mce-href=\"https://blog.revolutionanalytics.com/2019/01/notebooks-from-the-practical-ai-workshop.html\">Notebooks from the Practical AI Workshop</a>",
+          "Id": "ff4d4e7d-8eed-4a99-abfe-9f76b0f5e9bb",
+          "Position": 1
+        },
+        {
+          "Content": "On the Azure blog, Xiaoyong Zhu (<a href=\"https://twitter.com/zxzxy1988\" data-mce-href=\"https://twitter.com/zxzxy1988\">@zxzxy1988</a>) explains how to <a href=\"https://azure.microsoft.com/blog/fine-tune-natural-language-processing-models-using-azure-machine-learning-service/\" data-mce-href=\"https://azure.microsoft.com/blog/fine-tune-natural-language-processing-models-using-azure-machine-learning-service/\">Fine-tune natural language processing models using Azure Machine Learning service</a>",
+          "Id": "ab5ddb87-da23-401b-86e9-70eede1b1eba",
+          "Position": 2
+        },
+        {
+          "Content": "The Azure updates team announce that <a href=\"https://azure.microsoft.com/en-us/updates/cognitive-services-speech-services-neural-text-to-speech-capability-is-in-preview/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/cognitive-services-speech-services-neural-text-to-speech-capability-is-in-preview/\">Cognitive Services Speech Services neural text-to-speech capability is in preview</a>",
+          "Id": "222be575-5aca-4bd0-b984-b7800ac7e047",
+          "Position": 3
+        },
+        {
+          "Content": "On MSDN, Nayan Patel explains how to <a href=\"https://blogs.msdn.microsoft.com/premier_developer/2018/12/25/build-an-interactive-assistant-using-qna-maker/\" data-mce-href=\"https://blogs.msdn.microsoft.com/premier_developer/2018/12/25/build-an-interactive-assistant-using-qna-maker/\">Build an interactive assistant using QnA Maker</a>",
+          "Id": "f7508514-3d9f-4b66-aa3d-8141136cd9f0",
+          "Position": 4
+        },
+        {
+          "Content": "Also on MSDN, Wriju Ghosh (<a href=\"https://twitter.com/wrijugh\" data-mce-href=\"https://twitter.com/wrijugh\">@wrijugh</a>) presents <a href=\"https://blogs.msdn.microsoft.com/wriju/2018/12/19/ai-playground-cognitive-services-labs/\" data-mce-href=\"https://blogs.msdn.microsoft.com/wriju/2018/12/19/ai-playground-cognitive-services-labs/\">AI playground – Cognitive Services Labs</a>",
+          "Id": "58dc4288-0aa4-4baf-a1d8-6a357d91d3e9",
+          "Position": 5
+        },
+        {
+          "Content": "On TechNet, Syed Shanu (<a href=\"https://twitter.com/syedshanu3\" data-mce-href=\"https://twitter.com/syedshanu3\">@syedshanu3</a>) talks about <a href=\"https://blogs.technet.microsoft.com/wikininjas/2018/12/18/tnwiki-article-spotlight-microsoft-bot-framework-real-life-example-of-authentication-using-azure-bot-service-and-fitbit-web-api/\" data-mce-href=\"https://blogs.technet.microsoft.com/wikininjas/2018/12/18/tnwiki-article-spotlight-microsoft-bot-framework-real-life-example-of-authentication-using-azure-bot-service-and-fitbit-web-api/\">Microsoft Bot Framework: Real Life Example of Authentication Using Azure Bot Service And FitBit Web API</a>",
+          "Id": "39d9fd42-8d5c-4fc9-9971-5d0df4138774",
+          "Position": 6
+        },
+        {
+          "Content": "Also on MSDN, Guy Barker (<a href=\"https://twitter.com/gbarkerZ\" data-mce-href=\"https://twitter.com/gbarkerZ\">@gbarkerZ</a>) writes <a href=\"https://blogs.msdn.microsoft.com/winuiautomation/2019/01/01/from-windows-10-eye-control-and-the-xbox-adaptive-controller-to-language-understanding-and-custom-image-reco-what-a-journey/\" data-mce-href=\"https://blogs.msdn.microsoft.com/winuiautomation/2019/01/01/from-windows-10-eye-control-and-the-xbox-adaptive-controller-to-language-understanding-and-custom-image-reco-what-a-journey/\">From Windows 10 Eye Control and the Xbox Adaptive Controller, to Language Understanding and Custom Image Reco – What a journey!</a>",
+          "Id": "f60d5ef9-94d6-49f6-9925-60fc6b3d13c6",
+          "Position": 7
+        },
+        {
+          "Content": "Also on Channel 9, Seth Juarez (<a href=\"https://twitter.com/sethjuarez\" data-mce-href=\"https://twitter.com/sethjuarez\">@sethjuarez</a>) talks about <a href=\"https://channel9.msdn.com/Shows/AI-Show/Building-a-Pet-Detector-in-30-minutes-or-less\" data-mce-href=\"https://channel9.msdn.com/Shows/AI-Show/Building-a-Pet-Detector-in-30-minutes-or-less\">Building a Pet Detector in 30 minutes or less</a>",
+          "Id": "26aef8d5-35e4-4aac-a3f8-097240cee5b4",
+          "Position": 8
+        },
+        {
+          "Content": "On Azure, Yochay Kiriaty (<a href=\"https://twitter.com/yochayk\" data-mce-href=\"https://twitter.com/yochayk\">@yochayk</a>) announces the <a href=\"https://azure.microsoft.com/en-us/blog/conversational-ai-updates-december-2018/\" data-mce-href=\"https://azure.microsoft.com/en-us/blog/conversational-ai-updates-december-2018/\">AI updates from December 2018</a>",
+          "Id": "88713733-102b-11e9-930b-c5755c3fb8df",
+          "Position": 9
+        }
+      ],
+      "Keywords": [
+        "\"Batch AI\"",
+        "\"Bot Service\"",
+        "\"Microsoft Genomics\"",
+        "\"Machine Learning\"",
+        "\" ML \" \"Machine Learning services\"",
+        "\"Machine Learning Studio\"",
+        "\"Cognitive Services\"",
+        "\"Bing Autosuggest API\"",
+        "\"Bing Custom Search API\"",
+        "\"Bing Entity Search API\"",
+        "\"Bing Image Search API\"",
+        "\"Bing News Search API\"",
+        "\"Bing Speech API\"",
+        "\"Bing Spell Check API\"",
+        "\"Bing Video Search API\"",
+        "\"Bing Visual Search API\"",
+        "\"Bing Web Search API\"",
+        "\"Bing Autosuggest\"",
+        "\"Bing Custom Search\"",
+        "\"Bing Entity Search\"",
+        "\"Bing Image Search\"",
+        "\"Bing News Search\"",
+        "\"Bing Speech\"",
+        "\"Bing Spell Check\"",
+        "\"Bing Video Search\"",
+        "\"Bing Web Search\"",
+        "\"Computer Vision API\"",
+        "\"Content moderator\"",
+        "\"Custom Decision Service\"",
+        "\"Custom Decision\"",
+        "\"Custom Speech Service\"",
+        "\"Custom Vision Service\"",
+        "\"Custom Vision\"",
+        "\"Emotion API\"",
+        "\"Face API\"",
+        "\"Language Understanding Intelligent Service\"",
+        "\"LUIS\"",
+        "\"Linguistic Analysis API\"",
+        "\"QnA Maker API\"",
+        "\"Speaker Recognition API\"",
+        "\"Text Analytics API\"",
+        "\"Translator Speech API\"",
+        "\"Translator Text API\"",
+        "\"Video Indexer\"",
+        "\"Web Language Model API\"",
+        "\"Cortana\"",
+        "\"Cortana Intelligence Suite\"",
+        "\" R \"",
+        "\"Python\"",
+        "\" AI \"",
+        "\"Artificial Intelligence\"",
+        "\"Machine Learning Workbench\"",
+        "\"Azure Notebooks\"",
+        "\"Visual Studio Tools for AI\"",
+        "\"\"VS Tools for AI\"\"",
+        "\"AI Toolkit for Azure IoT Edge\"",
+        "\"Bot Framework\"",
+        "\"Bots\"",
+        "\"Machine Learning Server\"",
+        "\"Data Science Virtual Machine\"",
+        "\"Jupyter\"",
+        "\"Microsoft Cognitive Toolkit\"",
+        "\"CNTK\"",
+        "\"deep learning\"",
+        "\"Neural Network\"",
+        "\"Neural Net\"",
+        "\" NN \"",
+        "\" ANN \"",
+        "\" RNN \"",
+        "\" CNN \""
+      ],
+      "Name": "AI + Machine Learning",
+      "Position": 0
+    },
+    {
+      "Description": "Azure Databricks, HDInsight, Data Factory, Stream Analytics, Data Lake Analytics, Event Hubs, Power BI, Azure Analysis Services, Apache Spark for HDInsight, Apache Storm for HDInsight, R Server for HDInsight, Data Catalog",
+      "Id": "67ef6a87-1d55-4e68-b3d7-6225e75ae2e0",
+      "Items": [
+        {
+          "Content": "On the Azure blog, James Terwilliger announces that <a href=\"https://azure.microsoft.com/en-us/blog/microsoft-open-sources-trill-to-deliver-insights-on-a-trillion-events-a-day/\" data-mce-href=\"https://azure.microsoft.com/en-us/blog/microsoft-open-sources-trill-to-deliver-insights-on-a-trillion-events-a-day/\">Microsoft open sources Trill to deliver insights on a trillion events a day</a>",
+          "Id": "6cd24062-102a-11e9-bef3-8989506e5921",
+          "Position": 0
+        },
+        {
+          "Content": "James Serra (<a href=\"https://twitter.com/JamesSerra\" data-mce-href=\"https://twitter.com/JamesSerra\">@JamesSerra</a>) describes <a href=\"http://feedproxy.google.com/~r/JamesSerra/~3/OMBhNdaBfF0/\" data-mce-href=\"http://feedproxy.google.com/~r/JamesSerra/~3/OMBhNdaBfF0/\">Azure Data Factory Data Flow</a>",
+          "Id": "a1622b0f-bc2d-4b5b-b40e-f90a8549d2df",
+          "Position": 1
+        },
+        {
+          "Content": "Chris Webb (<a href=\"https://twitter.com/cwebb_bi\" data-mce-href=\"https://twitter.com/cwebb_bi\">@cwebb_bi</a>) talks about <a href=\"https://blog.crossjoin.co.uk/2019/01/04/odbc-power-bi-power-query-refresh-performance/\" data-mce-href=\"https://blog.crossjoin.co.uk/2019/01/04/odbc-power-bi-power-query-refresh-performance/\">ODBC Data Sources, The SqlCapabilities Option And Power Query/Power BI Data Refresh Performance</a>",
+          "Id": "b11b6ba9-96dc-4e15-a5d1-570703273c1a",
+          "Position": 2
+        },
+        {
+          "Content": "On the MSSQL Tips site, Haroon Ashraf discusses <a href=\"http://feedproxy.google.com/~r/MSSQLTips-LatestSqlServerTips/~3/6z_SmZtJmyY/\" data-mce-href=\"http://feedproxy.google.com/~r/MSSQLTips-LatestSqlServerTips/~3/6z_SmZtJmyY/\">Microsoft Azure Analysis Services Web Development Tools (Part 2)</a>",
+          "Id": "7b6f07ed-240f-4662-9da4-c92741a225f3",
+          "Position": 3
+        },
+        {
+          "Content": "On the Azure blog, Gabi Lehner explains how to <a href=\"https://azure.microsoft.com/blog/connect-azure-data-explorer-to-power-bi-for-visual-depiction-of-data/\" data-mce-href=\"https://azure.microsoft.com/blog/connect-azure-data-explorer-to-power-bi-for-visual-depiction-of-data/\">Connect Azure Data Explorer to Power BI for visual depiction of data</a>",
+          "Id": "e0863cc2-7e71-4a3b-bb90-35c9a9afc760",
+          "Position": 4
+        },
+        {
+          "Content": "Chris Webb (<a href=\"https://twitter.com/cwebb_bi\" data-mce-href=\"https://twitter.com/cwebb_bi\">@cwebb_bi</a>) describes <a href=\"https://blog.crossjoin.co.uk/2018/12/18/power-bi-and-column-order-in-m-queries-and-dataset-tables/\" data-mce-href=\"https://blog.crossjoin.co.uk/2018/12/18/power-bi-and-column-order-in-m-queries-and-dataset-tables/\">Power BI And Column Order In M Queries And Dataset Tables</a>, blogs about <a href=\"https://blog.crossjoin.co.uk/2018/12/21/power-bi-drillthrough-complex-measures/\" data-mce-href=\"https://blog.crossjoin.co.uk/2018/12/21/power-bi-drillthrough-complex-measures/\">Making Power BI Drillthrough Return The Right Rows When You Use It With Complex Measures</a>, discusses <a href=\"https://blog.crossjoin.co.uk/2018/12/27/data-privacy-settings-data-refresh-performance-power-bi-excel/\" data-mce-href=\"https://blog.crossjoin.co.uk/2018/12/27/data-privacy-settings-data-refresh-performance-power-bi-excel/\">Data Privacy Settings And Data Refresh Performance In Excel And Power BI</a> and announces his <a href=\"https://blog.crossjoin.co.uk/2018/12/30/fourteenth-blog-birthday/\" data-mce-href=\"https://blog.crossjoin.co.uk/2018/12/30/fourteenth-blog-birthday/\">Fourteenth Blog Birthday</a>",
+          "Id": "71dfc181-f514-4d9c-b0bd-05fccbbeb3fb",
+          "Position": 5
+        },
+        {
+          "Content": "On MSDN, Charles Sterling (<a href=\"https://twitter.com/chass\" data-mce-href=\"https://twitter.com/chass\">@chass</a>) announces <a href=\"https://blogs.msdn.microsoft.com/charles_sterling/2018/12/19/the-power-bi-world-tour-is-back-in-2019-as-the-power-platform-world-tour/\" data-mce-href=\"https://blogs.msdn.microsoft.com/charles_sterling/2018/12/19/the-power-bi-world-tour-is-back-in-2019-as-the-power-platform-world-tour/\">The Power BI World Tour is back in 2019 as the Power Platform World Tour!</a>",
+          "Id": "5c2dbe00-bed3-4984-8bc1-382f3bd62dd4",
+          "Position": 6
+        },
+        {
+          "Content": "On the Power BI blog, Swati Gupta talks about <a href=\"https://powerbi.microsoft.com/en-us/blog/power-bi-premium-capacity-metrics-app-makes-navigating-and-viewing-metrics-at-workspace-level-easier/\" data-mce-href=\"https://powerbi.microsoft.com/en-us/blog/power-bi-premium-capacity-metrics-app-makes-navigating-and-viewing-metrics-at-workspace-level-easier/\">Power BI Premium Capacity Metrics app makes navigating and viewing metrics at workspace level easier</a>, Kay Unkroth describes <a href=\"https://powerbi.microsoft.com/en-us/blog/workspace-management-in-the-admin-portal/\" data-mce-href=\"https://powerbi.microsoft.com/en-us/blog/workspace-management-in-the-admin-portal/\">Workspace Management in the Admin Portal</a>, Nikhil Gaekwad blogs about the <a href=\"https://powerbi.microsoft.com/en-us/blog/power-bi-service-and-mobile-november-and-december-2018-feature-summary/\" data-mce-href=\"https://powerbi.microsoft.com/en-us/blog/power-bi-service-and-mobile-november-and-december-2018-feature-summary/\">Power BI Service and Mobile November &amp; December Feature Summary</a> and Sujata Narayana wishes you <a href=\"https://powerbi.microsoft.com/en-us/blog/happy-new-year-from-power-bi-desktop-2/\" data-mce-href=\"https://powerbi.microsoft.com/en-us/blog/happy-new-year-from-power-bi-desktop-2/\">Happy New Year from Power BI Desktop!</a>",
+          "Id": "cdc2397d-b384-4162-9930-06f1816e6b54",
+          "Position": 7
+        },
+        {
+          "Content": "Also on MSDN, Ed Price (<a href=\"https://twitter.com/UserEd_\" data-mce-href=\"https://twitter.com/UserEd_\">@UserEd_</a>) describes <a href=\"https://blogs.msdn.microsoft.com/azurecat/2018/12/20/new-reference-architecture-build-a-real-time-recommendation-api-on-azure/\" data-mce-href=\"https://blogs.msdn.microsoft.com/azurecat/2018/12/20/new-reference-architecture-build-a-real-time-recommendation-api-on-azure/\">a new reference architecture: Build a real-time recommendation API on Azure</a>",
+          "Id": "ad2015d7-114c-442a-8651-e16c97c36695",
+          "Position": 8
+        },
+        {
+          "Content": "The Azure updates team announces that <a href=\"https://azure.microsoft.com/en-us/updates/self-service-big-data-prep-dataflows-now-available-in-power-bi-embedded/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/self-service-big-data-prep-dataflows-now-available-in-power-bi-embedded/\">Self-service big data prep dataflows available in Power BI Embedded</a>, <a href=\"https://azure.microsoft.com/en-us/updates/power-bi-embedded-new-workspace-experience-creation-api/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/power-bi-embedded-new-workspace-experience-creation-api/\">Power BI Embedded new workspace experience creation API</a> and the&nbsp;<a href=\"https://azure.microsoft.com/en-us/updates/power-bi-service-december-update/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/power-bi-service-december-update/\">Power BI service December update</a>, they delve into <a href=\"https://azure.microsoft.com/en-us/updates/power-bi-embedded-zero-downtime-capacity-scale/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/power-bi-embedded-zero-downtime-capacity-scale/\">Power BI Embedded zero-downtime capacity scale</a>, talk about using <a href=\"https://azure.microsoft.com/en-us/updates/power-bi-embedded-capacity-metrics-to-monitor-workloads/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/power-bi-embedded-capacity-metrics-to-monitor-workloads/\">Power BI Embedded capacity metrics to monitor workloads</a>, and discuss&nbsp;<a href=\"https://azure.microsoft.com/en-us/updates/azure-resource-health-monitoring-for-power-bi-embedded/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-resource-health-monitoring-for-power-bi-embedded/\">Azure Resource Health monitoring for Power BI Embedded</a>,",
+          "Id": "c0eecc12-665e-46ea-b539-787bb01e1802",
+          "Position": 9
+        },
+        {
+          "Content": "On TechNet, Theo van Kraay (<a href=\"https://twitter.com/TheoKraay\" data-mce-href=\"https://twitter.com/TheoKraay\">@TheoKraay</a>) describes <a href=\"https://blogs.technet.microsoft.com/uktechnet/2018/12/20/azure-iot-hub-stream-analytics-and-mongodb/\" data-mce-href=\"https://blogs.technet.microsoft.com/uktechnet/2018/12/20/azure-iot-hub-stream-analytics-and-mongodb/\">Handling Device Telemetry into MongoDB using Azure IoT Hub, Stream Analytics, and Azure Functions</a>",
+          "Id": "d645a8cd-f74f-4bdc-9fbc-f79c697f68ff",
+          "Position": 10
+        },
+        {
+          "Content": "Also on TechNet, Ed Price (<a href=\"https://twitter.com/UserEd_\" data-mce-href=\"https://twitter.com/UserEd_\">@UserEd_</a>) covers an <a href=\"https://blogs.technet.microsoft.com/wikininjas/2018/12/24/interview-with-a-wiki-ninja-analytics-guru-jayendran-arumugam/\" data-mce-href=\"https://blogs.technet.microsoft.com/wikininjas/2018/12/24/interview-with-a-wiki-ninja-analytics-guru-jayendran-arumugam/\">Interview with a Wiki Ninja &amp; Analytics Guru – Jayendran Arumugam</a>",
+          "Id": "a6869cbe-cb25-480f-93c6-5056e6585248",
+          "Position": 11
+        },
+        {
+          "Content": "On Microsoft Cloud Show, Andrew Connell and Chris Johnson talk about <a href=\"http://feeds.microsoftcloudshow.com/~r/microsoftcloudshowepisodes/~3/xCA0I8RAvQM/284-azure-application-insights-and-powerbi-with-jason-himmelstein\" data-mce-href=\"http://feeds.microsoftcloudshow.com/~r/microsoftcloudshowepisodes/~3/xCA0I8RAvQM/284-azure-application-insights-and-powerbi-with-jason-himmelstein\">Azure Application Insights and PowerBI with Jason Himmelstein</a>",
+          "Id": "6c77fd60-0f64-11e9-b72e-2fa8cf86ebed",
+          "Position": 12
+        },
+        {
+          "Content": "On Code Project, Allen O'Neil (<a href=\"https://twitter.com/ajsondev\" data-mce-href=\"https://twitter.com/ajsondev\">@ajsondev</a>) discusses <a href=\"https://www.codeproject.com/Articles/1273184/Azure-Digital-Twins\" data-mce-href=\"https://www.codeproject.com/Articles/1273184/Azure-Digital-Twins\">Azure Digital Twins</a>",
+          "Id": "467def50-0f66-11e9-b72e-2fa8cf86ebed",
+          "Position": 13
+        },
+        {
+          "Content": "Also on TechNet, Amanda Buchholz presents: <a href=\"https://blogs.technet.microsoft.com/ptsblog/2018/12/31/learn-how-to-build-end-to-end-cloud-scale-analytics-solutions-in-azure/\" data-mce-href=\"https://blogs.technet.microsoft.com/ptsblog/2018/12/31/learn-how-to-build-end-to-end-cloud-scale-analytics-solutions-in-azure/\">Learn how to build end-to-end cloud scale analytics solutions in Azure</a>",
+          "Id": "a84fc8b3-0017-43e0-8df1-828e6653e01b",
+          "Position": 14
+        },
+        {
+          "Content": "Yung Chou (<a href=\"https://twitter.com/yungchou\" data-mce-href=\"https://twitter.com/yungchou\">@yungchou</a>) provides <a href=\"https://yungchou.wordpress.com/2019/01/01/a-real-time-data-stream-monitor-with-shiny/\" data-mce-href=\"https://yungchou.wordpress.com/2019/01/01/a-real-time-data-stream-monitor-with-shiny/\">A Shiny App for Monitoring Real-Time Data Stream</a>",
+          "Id": "00f33478-023f-461d-a161-f3ad18bf6a3c",
+          "Position": 15
+        }
+      ],
+      "Keywords": [
+        "\"Databricks\"",
+        "\"HDInsight\"",
+        "\"Data Factory\"",
+        "\"Stream Analytics\"",
+        "\"Data Lake Analytics\"",
+        "\"Event Hubs\"",
+        "\"Power BI\"",
+        "\"Power BI Embedded\"",
+        "\"Power BI Service\"",
+        "\"Azure Analysis Services\"",
+        "\"Analysis Services\"",
+        "\"Apache Spark for HDInsight\"",
+        "\"Apache Storm for HDInsight\"",
+        "\"R Server for HDInsight\"",
+        "\"Data Catalog\"",
+        "\"Hadoop\"",
+        "\"Spark\"",
+        "\"R Server\"",
+        "\"HBase\"",
+        "\"Storm\"",
+        "\"Dynamics 365 for Customer Insights\""
+      ],
+      "Name": "Analytics",
+      "Position": 1
+    },
+    {
+      "Description": "Virtual Machines, Functions, Batch, Service Fabric, Virtual Machine Scale Sets, Cloud Services, Linux Virtual Machines, SAP HANA on Azure Large Instances",
+      "Id": "c082c922-71cd-4e5a-854a-e0c974b7ef15",
+      "Items": [
+        {
+          "Content": "On the MSSQL Tips site, Daniel Farina presents <a href=\"http://feedproxy.google.com/~r/MSSQLTips-LatestSqlServerTips/~3/YaVEMUsVtao/\" data-mce-href=\"http://feedproxy.google.com/~r/MSSQLTips-LatestSqlServerTips/~3/YaVEMUsVtao/\">Introduction to Bash Scripting: Functions</a>",
+          "Id": "c3d85a69-0129-4d57-8707-dddbb2858274",
+          "Position": 0
+        },
+        {
+          "Content": "On MSDN, Ed Price writes about <a href=\"https://blogs.msdn.microsoft.com/azurecat/2018/12/21/new-reference-architecture-batch-scoring-of-python-models-on-azure/\" data-mce-href=\"https://blogs.msdn.microsoft.com/azurecat/2018/12/21/new-reference-architecture-batch-scoring-of-python-models-on-azure/\">a new reference architecture: Batch scoring of Python models on Azure</a>",
+          "Id": "ad7b31c1-de05-426e-b973-c46a46791dc8",
+          "Position": 1
+        },
+        {
+          "Content": "Mark Heath (<a href=\"https://twitter.com/mark_heath\" data-mce-href=\"https://twitter.com/mark_heath\">@mark_heath</a>) discusses <a href=\"http://feedproxy.google.com/~r/soundcode/~3/7Csr_7y1RoU/durable-functions-manage-history\" data-mce-href=\"http://feedproxy.google.com/~r/soundcode/~3/7Csr_7y1RoU/durable-functions-manage-history\">Managing Durable Functions Orchestration History</a>",
+          "Id": "6ab5fc6b-b460-4d38-b076-5c9b27aee80a",
+          "Position": 2
+        },
+        {
+          "Content": "On Code Project, Duncan Edwards Jones (<a href=\"https://twitter.com/Merrion\" data-mce-href=\"https://twitter.com/Merrion\">@Merrion</a>) discusses how to <a href=\"https://www.codeproject.com/Tips/1273272/Durable-functions-set-custom-status-message\" data-mce-href=\"https://www.codeproject.com/Tips/1273272/Durable-functions-set-custom-status-message\">set custom status message in Durable Functions</a>",
+          "Id": "3e203ea1-a59f-4469-9097-d3ad12f3d75f",
+          "Position": 3
+        },
+        {
+          "Content": "Also on Code Project, Sibeesh Passion (<a href=\"https://twitter.com/SibeeshVenu\" data-mce-href=\"https://twitter.com/SibeeshVenu\">@SibeeshVenu</a>) describes <a href=\"https://www.codeproject.com/Articles/1272272/Azure-Function-as-Output-Job-Topology-of-an-Azure\" data-mce-href=\"https://www.codeproject.com/Articles/1272272/Azure-Function-as-Output-Job-Topology-of-an-Azure\">Azure Function as Output Job Topology of an Azure Stream Analytics Job</a> and covers <a href=\"https://www.codeproject.com/Articles/1273206/Realtime-Serverless-IoT-Data-using-Azure-SignalR-a\" data-mce-href=\"https://www.codeproject.com/Articles/1273206/Realtime-Serverless-IoT-Data-using-Azure-SignalR-a\">Realtime Serverless IoT Data using Azure SignalR and Azure Functions in Angular</a>",
+          "Id": "bc56cd5e-1f95-4d8d-92f7-40e7848f6798",
+          "Position": 4
+        }
+      ],
+      "Keywords": [
+        "\"Virtual Machines\"",
+        "\"Azure Function\"",
+        "\"Functions\"",
+        "\"Batch\"",
+        "\"Azure Batch AI\"",
+        "\"Service Fabric\"",
+        "\"Virtual Machine Scale Sets\"",
+        "\"Cloud Services\"",
+        "\"Linux Virtual Machines\"",
+        "\"SAP HANA on Azure Large Instances\"",
+        "\"VM\"",
+        "\"Linux VM\"",
+        "\"Nano Server\"",
+        "\"A Series\"",
+        "\"B Series\"",
+        "\"Av2 Series\"",
+        "\"D1 Series\"",
+        "\"D2 Series\"",
+        "\"Ev3 Series\"",
+        "\"F Series\"",
+        "\"G Series\"",
+        "\"H Series\"",
+        "\"L Series\"",
+        "\"M Series\"",
+        "\"N Series\"",
+        "\"NC\"",
+        "\"NCv2\"",
+        "\"NCv3\"",
+        "\"ND\"",
+        "\"NV\"",
+        "\"vm scale sets\"",
+        "\"scale sets\"",
+        "\"auto-scaling\"",
+        "functions",
+        "serverless",
+        "\"resource consumption\"",
+        "executions",
+        "bindings",
+        "\"event processing\"",
+        "batch",
+        "shipyard",
+        "\"batch shipyard\"",
+        "cluster",
+        "hyperscale",
+        "GPU",
+        "HPC",
+        "MPI",
+        "pool",
+        "\"application packages\"",
+        "job",
+        "task",
+        "\"job manager\"",
+        "\"compute node\"",
+        "microservices",
+        "\"Naming Service\"",
+        "\"Image Store Service\"",
+        "\"Reliable Services\"",
+        "\"Reliable Actors\"",
+        "\"Reliable Collections\"",
+        "\"Cloud Services\"",
+        "\"Worker Role\"",
+        "\"Web Role\"",
+        "\"cloud platform\"",
+        "\"cloud service\"",
+        "\"cloud computing platform\"",
+        "infrastructure",
+        "PaaS",
+        "IaaS",
+        "blockchain",
+        "Ethereum",
+        "hyperledger",
+        "cryptlets",
+        "\"smart contracts\""
+      ],
+      "Name": "Compute",
+      "Position": 2
+    },
+    {
+      "Description": "Container Registry, Container Instances, Azure Kubernetes Service (AKS), Web App for Containers",
+      "Id": "6251c6d0-6467-4897-a540-3fc6c6c1ffeb",
+      "Items": [
+        {
+          "Content": "Simon J.K. Pedersen (<a href=\"https://twitter.com/simped\" data-mce-href=\"https://twitter.com/simped\">@simped</a>) explains how to <a href=\"https://wp.sjkp.dk/execute-file-permission-for-azure-container-instances/\" data-mce-href=\"https://wp.sjkp.dk/execute-file-permission-for-azure-container-instances/\">Execute file permission for Azure Container Instances</a>",
+          "Id": "40893b76-32fd-42ea-8fa0-7c06cdca8ee5",
+          "Position": 0
+        },
+        {
+          "Content": "Steve Buchanan (<a href=\"https://twitter.com/buchatech\" data-mce-href=\"https://twitter.com/buchatech\">@buchatech</a>) blogs about <a href=\"http://www.buchatech.com/2019/01/1-getting-started-with-azure-kubernetes-service-aks/\" data-mce-href=\"http://www.buchatech.com/2019/01/1-getting-started-with-azure-kubernetes-service-aks/\">Getting Started with Azure Kubernetes Service AKS</a>",
+          "Id": "60b92f21-1728-4f2f-8e7f-f40501c7265f",
+          "Position": 1
+        },
+        {
+          "Content": "The Azure updates team announces the <a href=\"https://azure.microsoft.com/en-us/updates/azure-kubernetes-service-december-update/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-kubernetes-service-december-update/\">Azure Kubernetes Service December Update</a>",
+          "Id": "7e56c746-b3dc-4d9b-8063-0c686e4c7bb5",
+          "Position": 2
+        },
+        {
+          "Content": "Alex Ellis (<a href=\"https://twitter.com/alexellisuk\" data-mce-href=\"https://twitter.com/alexellisuk\">@alexellisuk</a>) explains how to <a href=\"https://blog.alexellis.io/build-your-own-bare-metal-arm-cluster/\" data-mce-href=\"https://blog.alexellis.io/build-your-own-bare-metal-arm-cluster/\">Build your own bare-metal ARM cluster</a>",
+          "Id": "101fd4f2-d9e1-4f85-b2c4-0878fb126941",
+          "Position": 3
+        },
+        {
+          "Content": "James van Den Berg explains how to <a href=\"https://mountainss.wordpress.com/2018/12/22/view-container-live-logs-with-azure-monitoring-aks-kubernetes-containers-azuredevops/\" data-mce-href=\"https://mountainss.wordpress.com/2018/12/22/view-container-live-logs-with-azure-monitoring-aks-kubernetes-containers-azuredevops/\">View Container Live logs with Azure Monitoring</a>",
+          "Id": "8fba9cec-19fd-42e0-a80a-bdddc0ff14a1",
+          "Position": 4
+        },
+        {
+          "Content": "On Channel 9, Damian Brady (<a href=\"https://twitter.com/damovisa\" data-mce-href=\"https://twitter.com/damovisa\">@damovisa</a>) talks about <a href=\"https://channel9.msdn.com/Shows/DevOps-Lab/Running-your-First-Docker-Container-in-Azure\" data-mce-href=\"https://channel9.msdn.com/Shows/DevOps-Lab/Running-your-First-Docker-Container-in-Azure\">Running your First Docker Container in Azure</a>",
+          "Id": "8967b8ae-28d5-4432-8cb3-ecc6b615d4cd",
+          "Position": 5
+        },
+        {
+          "Content": "Brian Bunke (<a href=\"https://twitter.com/brianbunke\" data-mce-href=\"https://twitter.com/brianbunke\">@brianbunke</a>) describes the <a href=\"https://brianbunke.github.io/blog/2018/12/31/vcenter-simulator-ci/\" data-mce-href=\"https://brianbunke.github.io/blog/2018/12/31/vcenter-simulator-ci/\">vCenter Simulator Docker Container</a>",
+          "Id": "8b6fba8d-ed65-4269-a643-f1ad505edc90",
+          "Position": 6
+        },
+        {
+          "Content": "On Microsoft Cloud Show, Andrew Connell and Chris Johnson discuss <a href=\"http://feeds.microsoftcloudshow.com/~r/microsoftcloudshowepisodes/~3/elH1bgt4NkM/283-kubecon-2018-deprecations-and-clarity\" data-mce-href=\"http://feeds.microsoftcloudshow.com/~r/microsoftcloudshowepisodes/~3/elH1bgt4NkM/283-kubecon-2018-deprecations-and-clarity\">KubeCon 2018, Deprecations and Clarity</a>",
+          "Id": "881a7cf3-9fa7-48d1-96e0-5b7a6c8159dc",
+          "Position": 7
+        },
+        {
+          "Content": "On MSDN, Steve Read (<a href=\"https://twitter.com/swread\" data-mce-href=\"https://twitter.com/swread\">@swread</a>) describes how to <a href=\"https://blogs.msdn.microsoft.com/azurecat/2018/12/17/setup-an-application-developers-controlled-distribution-adcd-in-ibm-zdt-v12/\" data-mce-href=\"https://blogs.msdn.microsoft.com/azurecat/2018/12/17/setup-an-application-developers-controlled-distribution-adcd-in-ibm-zdt-v12/\">Setup an Application Developers Controlled Distribution ADCD in IBM zD&amp;T v12</a>",
+          "Id": "06994bb5-3634-4314-b0d7-7d7c8308f63d",
+          "Position": 8
+        }
+      ],
+      "Keywords": [
+        "\"Container Registry\"",
+        "\"Container Instances\"",
+        "\"Container Service\"",
+        "\"ACS\"",
+        "\"AKS\"",
+        "\"Web App for Containers\"",
+        "Container",
+        "Docker",
+        "\"DC/OS\"",
+        "DCOS",
+        "Swarm",
+        "Kubernetes",
+        "k8s",
+        "cluster",
+        "Marathon",
+        "Dokku",
+        "Compose",
+        "\"Linux containers\"",
+        "\"Docker registry\"",
+        "Mesos",
+        "Mesosphere",
+        "Deis",
+        "\"Windows Containers\"",
+        "\"Kubernetes Service\""
+      ],
+      "Name": "Containers",
+      "Position": 3
+    },
+    {
+      "Description": "Azure SQL Database, Azure Cosmos DB, SQL Data Warehouse, Redis Cache, SQL Server Stretch Database, SQL Server on virtual machines, Table storage, Azure Database for PostgreSQL, Azure Database for MySQL",
+      "Id": "499a010d-01a8-4f58-b8fa-bbc1e7288e77",
+      "Items": [
+        {
+          "Content": "On the Azure blog, Jovan Popovic (<a href=\"https://twitter.com/jocapc\" data-mce-href=\"https://twitter.com/jocapc\">@jocapc</a>) talks about <a href=\"https://azure.microsoft.com/blog/transforming-your-data-in-azure-sql-database-to-columnstore-format/\" data-mce-href=\"https://azure.microsoft.com/blog/transforming-your-data-in-azure-sql-database-to-columnstore-format/\">Transforming your data in Azure SQL Database to columnstore format</a>",
+          "Id": "62d73d61-903a-412f-87c2-788eea745693",
+          "Position": 0
+        },
+        {
+          "Content": "Also on the Azure blog, Kate Baroni describes how <a href=\"https://azure.microsoft.com/blog/a-fintech-startup-pivots-to-azure-cosmos-db/\" data-mce-href=\"https://azure.microsoft.com/blog/a-fintech-startup-pivots-to-azure-cosmos-db/\">A fintech startup pivots to Azure Cosmos DB</a>",
+          "Id": "5b332a00-bae3-4dde-a1a2-2345ba97bd33",
+          "Position": 1
+        },
+        {
+          "Content": "the Azure updates team describes <a href=\"https://azure.microsoft.com/en-us/updates/sql-data-warehouse-integration-with-informatica-ipaas-on-azure/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/sql-data-warehouse-integration-with-informatica-ipaas-on-azure/\">SQL Data Warehouse integration with Informatica iPaaS on Azure</a>, and announces&nbsp;<a href=\"https://azure.microsoft.com/en-us/updates/azure-cosmos-db-emulator-support-for-cassandra-api/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-cosmos-db-emulator-support-for-cassandra-api/\">Azure Cosmos DB emulator support for Cassandra API</a>&nbsp;and that <a href=\"https://azure.microsoft.com/en-us/updates/dev-test-pricing-for-azure-sql-database-managed-instance-is-now-available/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/dev-test-pricing-for-azure-sql-database-managed-instance-is-now-available/\">Dev/test pricing for Azure SQL Database Managed Instance is now available</a>!",
+          "Id": "53fcdc91-32a2-41c4-a8fa-f7cb0512326e",
+          "Position": 2
+        },
+        {
+          "Content": "On MSDN, Jose M Jurado (<a href=\"https://twitter.com/jmjuradodiaz\" data-mce-href=\"https://twitter.com/jmjuradodiaz\">@jmjuradodiaz</a>) discusses how <a href=\"https://blogs.msdn.microsoft.com/azuresqldbsupport/2018/12/28/lesson-learned-50-adding-pk-led-to-transaction-log-full-error/\" data-mce-href=\"https://blogs.msdn.microsoft.com/azuresqldbsupport/2018/12/28/lesson-learned-50-adding-pk-led-to-transaction-log-full-error/\">Adding PK led to transaction log full error</a> and writes that <a href=\"https://blogs.msdn.microsoft.com/azuresqldbsupport/2019/01/02/lesson-learned-52-azure-database-for-mysql-server-is-not-configured-to-allow-ipv6-connections/\" data-mce-href=\"https://blogs.msdn.microsoft.com/azuresqldbsupport/2019/01/02/lesson-learned-52-azure-database-for-mysql-server-is-not-configured-to-allow-ipv6-connections/\">Azure Database for MySQL – Server is not configured to allow ipv6 connections</a>",
+          "Id": "9f766149-4fb8-44d1-9a14-f85cb408babe",
+          "Position": 3
+        },
+        {
+          "Content": "On TechNet, Mat Stephen, Data Solutions Architect, talks about <a href=\"https://blogs.technet.microsoft.com/mat_stephen/2018/12/29/sharing-data-with-azure/\" data-mce-href=\"https://blogs.technet.microsoft.com/mat_stephen/2018/12/29/sharing-data-with-azure/\">Sharing Data with Azure</a>",
+          "Id": "1eef1cc2-b77a-4209-919a-3073fc9e5579",
+          "Position": 4
+        },
+        {
+          "Content": "On Code Project, Microsoft explains how to <a href=\"https://www.codeproject.com/Articles/1272150/Build-a-NET-Core-console-app-to-manage-data-in-Azu\" data-mce-href=\"https://www.codeproject.com/Articles/1272150/Build-a-NET-Core-console-app-to-manage-data-in-Azu\">Build a .NET Core console app to manage data in Azure Cosmos DB SQL API account SDK Version 3 Preview</a>, covers <a href=\"https://www.codeproject.com/Articles/1272146/Azure-Cosmos-DB-SQL-API-getting-started-tutorial\" data-mce-href=\"https://www.codeproject.com/Articles/1272146/Azure-Cosmos-DB-SQL-API-getting-started-tutorial\">Azure Cosmos DB: SQL API getting started tutorial</a>, and explains how to <a href=\"https://www.codeproject.com/Articles/1272158/Build-a-Node-js-console-app-with-the-JavaScript-SD\" data-mce-href=\"https://www.codeproject.com/Articles/1272158/Build-a-Node-js-console-app-with-the-JavaScript-SD\">Build a Node.js console app with the JavaScript SDK to manage Azure Cosmos DB SQL API data</a> and&nbsp;<a href=\"https://www.codeproject.com/Articles/1272161/Build-a-NET-web-app-with-Azure-Cosmos-DB-using-the\" data-mce-href=\"https://www.codeproject.com/Articles/1272161/Build-a-NET-web-app-with-Azure-Cosmos-DB-using-the\">Build a .NET web app with Azure Cosmos DB using the SQL API and the Azure portal</a>",
+          "Id": "32303bb9-ce12-48b2-abe4-7bac61551161",
+          "Position": 5
+        },
+        {
+          "Content": "Also on Code Project, Anthony Chu discusses how to <a href=\"https://www.codeproject.com/Articles/1272678/Broadcast-Real-time-Updates-from-Azure-Cosmos-DB-2\" data-mce-href=\"https://www.codeproject.com/Articles/1272678/Broadcast-Real-time-Updates-from-Azure-Cosmos-DB-2\">Broadcast Real-time Updates from Azure Cosmos DB with SignalR Service and Azure Functions</a>",
+          "Id": "b31d2140-bc11-4a15-b001-5635e5cdd652",
+          "Position": 6
+        },
+        {
+          "Content": "Also on Code Project, Matas Quaranta presents <a href=\"https://www.codeproject.com/Articles/1272677/Azure-Cosmos-DB-plus-Functions-Cookbook-static-c-2\" data-mce-href=\"https://www.codeproject.com/Articles/1272677/Azure-Cosmos-DB-plus-Functions-Cookbook-static-c-2\">Azure Cosmos DB + Functions Cookbook— static client</a>",
+          "Id": "469da470-e6db-4efc-95c8-98c5876c21a9",
+          "Position": 7
+        },
+        {
+          "Content": "Also on Code Project, Vivek Johari (<a href=\"https://twitter.com/VivekJohari\" data-mce-href=\"https://twitter.com/VivekJohari\">@VivekJohari</a>) describes <a href=\"https://www.codeproject.com/Articles/1272888/Azure-Creating-an-Azure-SQL-Database\" data-mce-href=\"https://www.codeproject.com/Articles/1272888/Azure-Creating-an-Azure-SQL-Database\">Creating an Azure SQL Database</a>",
+          "Id": "b4aeca93-a1ab-400f-a60c-102534101c14",
+          "Position": 8
+        },
+        {
+          "Content": "Also on MSDN, Jose M Jurado (<a href=\"https://twitter.com/jmjuradodiaz\" data-mce-href=\"https://twitter.com/jmjuradodiaz\">@jmjuradodiaz</a>) highlights <a href=\"https://blogs.msdn.microsoft.com/azuresqldbsupport/2018/12/29/lesson-learned-51-managed-instance-import-via-sqlpackage-exe-doesnt-allow-autogrow/\" data-mce-href=\"https://blogs.msdn.microsoft.com/azuresqldbsupport/2018/12/29/lesson-learned-51-managed-instance-import-via-sqlpackage-exe-doesnt-allow-autogrow/\">Managed Instance – Import via Sqlpackage.exe doesnt allow autogrow</a>",
+          "Id": "8a2fad70-a366-42f7-9c88-6b9d228b3925",
+          "Position": 9
+        },
+        {
+          "Content": "Also on MSDN, the AzureCAT team talks about <a href=\"https://blogs.msdn.microsoft.com/azurecat/2018/12/24/azure-data-architecture-guide-blog-8-data-warehousing/\" data-mce-href=\"https://blogs.msdn.microsoft.com/azurecat/2018/12/24/azure-data-architecture-guide-blog-8-data-warehousing/\">data warehousing (Azure Data Architecture Guide)</a>",
+          "Id": "c0996c79-8588-49e5-a11c-f32bb0e7c174",
+          "Position": 10
+        },
+        {
+          "Content": "Also on the Azure blog, Swati Sachdeva announces that <a href=\"https://azure.microsoft.com/blog/azure-backup-can-automatically-protect-sql-databases-in-azure-vm-through-auto-protect/\" data-mce-href=\"https://azure.microsoft.com/blog/azure-backup-can-automatically-protect-sql-databases-in-azure-vm-through-auto-protect/\">Azure Backup can automatically protect SQL databases in Azure VM through auto-protect</a>",
+          "Id": "a6ddfabd-492e-4b7d-bbcf-0b0b54362067",
+          "Position": 11
+        },
+        {
+          "Content": "On the Database Journal site, Greg Larsen delves into <a href=\"https://www.databasejournal.com/features/mssql/customizing-the-default-azure-data-studio-dashboards.html\" data-mce-href=\"https://www.databasejournal.com/features/mssql/customizing-the-default-azure-data-studio-dashboards.html\">Customizing the Default Azure Data Studio Dashboards</a>",
+          "Id": "daf5d8e4-6bc6-4b12-98c7-14d143b0d8e6",
+          "Position": 12
+        }
+      ],
+      "Keywords": [
+        "\"SQL Database\"",
+        "\"SQL DB\"",
+        "\"SQL-DB\"",
+        "\"SQLDB\"",
+        "\"Azure SQL Database\"",
+        "\"Cosmos\"",
+        "\"Cosmos DB\"",
+        "\"Cosmos-DB\"",
+        "\"CosmosDB\"",
+        "\"Azure Cosmos DB\"",
+        "\"DocumentDB\"",
+        "\"Document DB\"",
+        "\"Document-DB\"",
+        "\"Gremlin\"",
+        "\"MongoDB\"",
+        "\"Mongo DB\"",
+        "\"Graph API\"",
+        "\"Graph\"",
+        "\"SQL Data Warehouse\"",
+        "\"SQLDW\"",
+        "\"SQL DW\"",
+        "\"SQL-DW\"",
+        "\"Redis Cache\"",
+        "\"SQL Server Stretch Database\"",
+        "\"Stretch Database\"",
+        "\"SQL Server on virtual machines\"",
+        "\"Table storage\"",
+        "\"Azure Database for PostgreSQL\"",
+        "\"Azure Database for MySQL\"",
+        "\"MySQL\"",
+        "\"My-SQL\"",
+        "\"PostgreSQL\"",
+        "\"Postgre-SQL\"",
+        "\"Postgre SQL\"",
+        "\"Elastic pools\"",
+        "\"transparent data encryption\"",
+        "\"TDE\"",
+        "\"data warehouse\"",
+        "\"columnstore\"",
+        "\"PolyBase\"",
+        "\"Stretch\"",
+        "\"Always Encrypted\"",
+        "\"Row-Level Security\"",
+        "T-SQL",
+        "\"Elastic Database\"",
+        "\"table service\"",
+        "\"structured data\"",
+        "OData",
+        "\"global distribution\""
+      ],
+      "Name": "Databases",
+      "Position": 4
+    },
+    {
+      "Description": "Visual Studio, Visual Studio Code, SDKs, Developer tool integrations, CLIs, Blockchain Workbench",
+      "Id": "4a87d8ec-a0d8-4a15-82fe-267445b345f4",
+      "Items": [
+        {
+          "Content": "On Geeks with Blogs, Anirudha Gupta (<a href=\"https://twitter.com/anirugu\" data-mce-href=\"https://twitter.com/anirugu\">@anirugu</a>) discusses <a href=\"http://feedproxy.google.com/~r/geekswithblogs/~3/6ZtJRKUBOBY/making-app-in-blazor-webassembly-in-visual-studio.aspx\" data-mce-href=\"http://feedproxy.google.com/~r/geekswithblogs/~3/6ZtJRKUBOBY/making-app-in-blazor-webassembly-in-visual-studio.aspx\">Making app in Blazor (Web Assembly) in Visual Studio</a>",
+          "Id": "9c9f88c2-2697-4ea8-8e0a-5733777885a0",
+          "Position": 0
+        },
+        {
+          "Content": "Ravikanth Chaganti (<a href=\"https://twitter.com/ravikanth\" data-mce-href=\"https://twitter.com/ravikanth\">@ravikanth</a>) talks about <a href=\"http://feedproxy.google.com/~r/RavikanthChaganti/~3/ldeLBmcqF2I/\" data-mce-href=\"http://feedproxy.google.com/~r/RavikanthChaganti/~3/ldeLBmcqF2I/\">Speaking at Experts Live India – Azure at the command line – Choosing the right tool</a>",
+          "Id": "31594496-c789-45ba-9c7a-ec1eb84a2da7",
+          "Position": 1
+        },
+        {
+          "Content": "On Code Project, Viano Piero explains <a href=\"https://www.codeproject.com/Articles/1273315/How-to-obtain-continous-integration-using-Visual-S\" data-mce-href=\"https://www.codeproject.com/Articles/1273315/How-to-obtain-continous-integration-using-Visual-S\">How to obtain continous integration using Visual Studio with no cost.</a>",
+          "Id": "0ef0e782-c701-41d7-88df-8da1a2632ace",
+          "Position": 2
+        },
+        {
+          "Content": "Scott Hanselman (<a href=\"https://twitter.com/shanselman\" data-mce-href=\"https://twitter.com/shanselman\">@shanselman</a>) describes <a href=\"http://feeds.hanselman.com/~/589512692/0/scotthanselman~Using-Visual-Studio-Code-to-program-Circuit-Python-with-an-AdaFruit-NeoTrellis-M.aspx\" data-mce-href=\"http://feeds.hanselman.com/~/589512692/0/scotthanselman~Using-Visual-Studio-Code-to-program-Circuit-Python-with-an-AdaFruit-NeoTrellis-M.aspx\">Using Visual Studio Code to program Circuit Python with an AdaFruit NeoTrellis M4</a>",
+          "Id": "922d2e32-5dc9-406d-8c9f-6231f591e27c",
+          "Position": 3
+        },
+        {
+          "Content": "On MSDN, Julien Oudot writes about <a href=\"https://blogs.msdn.microsoft.com/premier_developer/2018/12/26/why-you-should-consider-vs-code-for-your-kubernetes-docker-work/\" data-mce-href=\"https://blogs.msdn.microsoft.com/premier_developer/2018/12/26/why-you-should-consider-vs-code-for-your-kubernetes-docker-work/\">Why you should consider VS Code for your Kubernetes/Docker work</a>",
+          "Id": "a51b7205-4fae-4d86-8bbd-5e3e3fc739b1",
+          "Position": 4
+        },
+        {
+          "Content": "Also on MSDN, Amanda Chew (<a href=\"https://twitter.com/chewamanda\" data-mce-href=\"https://twitter.com/chewamanda\">@chewamanda</a>) provides <a href=\"https://blogs.msdn.microsoft.com/vsappcenter/a-new-year-ahead-the-hockeyapp-cutover-experience/\" data-mce-href=\"https://blogs.msdn.microsoft.com/vsappcenter/a-new-year-ahead-the-hockeyapp-cutover-experience/\">A New Year Ahead – the HockeyApp Cutover Experience</a>",
+          "Id": "bf106d56-5c04-4920-aa18-c5aaaf58175e",
+          "Position": 5
+        },
+        {
+          "Content": "Also on MSDN, Glenn Wester (<a href=\"https://twitter.com/glennwester\" data-mce-href=\"https://twitter.com/glennwester\">@glennwester</a>) provides <a href=\"https://blogs.msdn.microsoft.com/vsappcenter/a-year-in-visual-studio-app-center-test/\" data-mce-href=\"https://blogs.msdn.microsoft.com/vsappcenter/a-year-in-visual-studio-app-center-test/\">A Year in Visual Studio App Center Test</a>",
+          "Id": "a64efd59-9cc7-4fa8-a21a-7fdb8f23747f",
+          "Position": 6
+        },
+        {
+          "Content": "Also on MSDN, Robert Green writes about <a href=\"https://blogs.msdn.microsoft.com/robertgreen/2018/12/19/visual-studio-toolbox-building-bots-part-2/\" data-mce-href=\"https://blogs.msdn.microsoft.com/robertgreen/2018/12/19/visual-studio-toolbox-building-bots-part-2/\">Visual Studio Toolbox: Building Bots (Part 2)</a>",
+          "Id": "41c71aa1-33ec-4d0f-8af4-52af99ba169d",
+          "Position": 7
+        },
+        {
+          "Content": "Also on MSDN, the Visual Studio Blog explains how to <a href=\"https://blogs.msdn.microsoft.com/visualstudio/2018/12/20/build-visual-studio-extensions-using-visual-studio-extensions/\" data-mce-href=\"https://blogs.msdn.microsoft.com/visualstudio/2018/12/20/build-visual-studio-extensions-using-visual-studio-extensions/\">Build Visual Studio extensions using Visual Studio extensions</a>",
+          "Id": "21a692d7-8e3f-4b69-8808-c20d5e1348fc",
+          "Position": 8
+        },
+        {
+          "Content": "Also on MSDN, Xin Shi explains how to <a href=\"https://blogs.msdn.microsoft.com/iotdev/2018/12/19/continue-using-hyper-v-container-for-iot-edge-on-windows-rs4/\" data-mce-href=\"https://blogs.msdn.microsoft.com/iotdev/2018/12/19/continue-using-hyper-v-container-for-iot-edge-on-windows-rs4/\">Continue using Hyper-V container for IoT Edge on Windows 10 1083</a>",
+          "Id": "b8465c16-2326-422d-80d8-530426ac069e",
+          "Position": 9
+        },
+        {
+          "Content": "Also on MSDN, Zakeel Muhammad says <a href=\"https://blogs.msdn.microsoft.com/vsappcenter/cheers-to-new-codepush-features/\" data-mce-href=\"https://blogs.msdn.microsoft.com/vsappcenter/cheers-to-new-codepush-features/\">Cheers to New CodePush Features</a>",
+          "Id": "61d69551-bd43-43d2-b7b5-79748efdf6ba",
+          "Position": 10
+        },
+        {
+          "Content": "On Channel 9, Ross Heise and Eliot Cowley ask <a href=\"https://channel9.msdn.com/Blogs/One-Dev-Minute/One-Dev-Question-What-makes-a-great-extension-for-VSCode\" data-mce-href=\"https://channel9.msdn.com/Blogs/One-Dev-Minute/One-Dev-Question-What-makes-a-great-extension-for-VSCode\">What makes a great extension for VSCode?</a> and <a href=\"https://channel9.msdn.com/Blogs/One-Dev-Minute/One-Dev-Question-Can-you-use-Git-in-VSCode\" data-mce-href=\"https://channel9.msdn.com/Blogs/One-Dev-Minute/One-Dev-Question-Can-you-use-Git-in-VSCode\">Can you use Git in VSCode?</a>",
+          "Id": "68901c51-51b9-47f6-b93b-f3616d430f46",
+          "Position": 11
+        },
+        {
+          "Content": "On Visual Studio Magazine, David Ramel (<a href=\"https://twitter.com/dramel\" data-mce-href=\"https://twitter.com/dramel\">@dramel</a>) writes about <a href=\"https://visualstudiomagazine.com/blogs/data-driver/2018/12/2018-vs-code.aspx\" data-mce-href=\"https://visualstudiomagazine.com/blogs/data-driver/2018/12/2018-vs-code.aspx\">2018: When VS Code Eclipsed Visual Studio IDE</a>",
+          "Id": "dbb3ead6-ce66-4966-a0f3-4f40949264c1",
+          "Position": 12
+        },
+        {
+          "Content": "Also on Code Project, Jicking D. Bebiro (<a href=\"https://twitter.com/jicking\" data-mce-href=\"https://twitter.com/jicking\">@jicking</a>) covers how to <a href=\"https://www.codeproject.com/Tips/1272015/Setup-an-ExpressJS-4-App-using-Visual-Studio-2017\" data-mce-href=\"https://www.codeproject.com/Tips/1272015/Setup-an-ExpressJS-4-App-using-Visual-Studio-2017\">Setup an ExpressJS 4 App using Visual Studio 2017</a>",
+          "Id": "f7d4852b-41a4-41c7-89d4-3e88019770a4",
+          "Position": 13
+        },
+        {
+          "Content": "On TechNet, David Branscome covers <a href=\"https://blogs.technet.microsoft.com/cloudyhappypeople/2018/12/24/setting-up-a-kali-linux-machine-in-azure/\" data-mce-href=\"https://blogs.technet.microsoft.com/cloudyhappypeople/2018/12/24/setting-up-a-kali-linux-machine-in-azure/\">Setting Up a Kali Linux Machine in Azure</a>",
+          "Id": "fc55b7cf-42a6-4ea0-be2c-b5ec32dc90bc",
+          "Position": 14
+        },
+        {
+          "Content": "Also on MSDN, Wriju Ghosh (<a href=\"https://twitter.com/wrijugh\" data-mce-href=\"https://twitter.com/wrijugh\">@wrijugh</a>) writes about <a href=\"https://blogs.msdn.microsoft.com/wriju/2018/12/20/free-trainings-for-azure-certifications-az/\" data-mce-href=\"https://blogs.msdn.microsoft.com/wriju/2018/12/20/free-trainings-for-azure-certifications-az/\">Free Trainings for Azure Certifications AZ-*</a>",
+          "Id": "be922de0-0f42-11e9-b72e-2fa8cf86ebed",
+          "Position": 15
+        },
+        {
+          "Content": "Gregor Suttie (<a href=\"https://twitter.com/gregor_suttie\" data-mce-href=\"https://twitter.com/gregor_suttie\">@gregor_suttie</a>) talks about <a href=\"https://gregorsuttie.com/2018/12/27/ambition-and-drive-to-learn-azure/\" data-mce-href=\"https://gregorsuttie.com/2018/12/27/ambition-and-drive-to-learn-azure/\">Ambition and Drive to Learn Azure</a>",
+          "Id": "1554462c-b104-4c15-8e6c-d548d0f6a9c1",
+          "Position": 16
+        },
+        {
+          "Content": "Also on TechNet, Mike Griswold (<a href=\"https://twitter.com/GrizzlyCM\" data-mce-href=\"https://twitter.com/GrizzlyCM\">@GrizzlyCM</a>) writes: <a href=\"https://blogs.technet.microsoft.com/system_center_in_action/2018/12/20/new-year-new-plans/\" data-mce-href=\"https://blogs.technet.microsoft.com/system_center_in_action/2018/12/20/new-year-new-plans/\">New Year. New Plans</a>",
+          "Id": "502307fc-5b85-46ca-be94-1a9716b7d61c",
+          "Position": 17
+        },
+        {
+          "Content": "Mark Heath (<a href=\"https://twitter.com/mark_heath\" data-mce-href=\"https://twitter.com/mark_heath\">@mark_heath</a>) writes about <a href=\"http://feedproxy.google.com/~r/soundcode/~3/FNSjqwXA_hU/2018-in-review\" data-mce-href=\"http://feedproxy.google.com/~r/soundcode/~3/FNSjqwXA_hU/2018-in-review\">2018 in Review</a>",
+          "Id": "f32820f4-0fdd-40f4-950a-a6868fad0d27",
+          "Position": 18
+        },
+        {
+          "Content": "On Channel 9, Dan Fernandez, Donovan Brown and Rob Caron talk about <a href=\"https://channel9.msdn.com/Shows/Azure-Friday/Learning-Azure-Part-1-Azure-Docs-tips-and-tricks\" data-mce-href=\"https://channel9.msdn.com/Shows/Azure-Friday/Learning-Azure-Part-1-Azure-Docs-tips-and-tricks\">Azure Docs tips and tricks</a> and <a href=\"https://channel9.msdn.com/Shows/Azure-Friday/Learning-Azure-Part-2-Architecture-and-interactive-APIs-for-NET-and-REST-APIs\" data-mce-href=\"https://channel9.msdn.com/Shows/Azure-Friday/Learning-Azure-Part-2-Architecture-and-interactive-APIs-for-NET-and-REST-APIs\">Architecture and interactive APIs for .NET and REST APIs</a>",
+          "Id": "5d14b733-f2d5-4bad-af70-983fb361e845",
+          "Position": 19
+        },
+        {
+          "Content": "Also on TechNet, the Cloud Platform Team highlights the <a href=\"https://blogs.technet.microsoft.com/stbnewsbytes/2018/12/19/cloud-platform-release-announcement-for-december-19-2018/\" data-mce-href=\"https://blogs.technet.microsoft.com/stbnewsbytes/2018/12/19/cloud-platform-release-announcement-for-december-19-2018/\">Cloud Platform Release Announcement for December 19, 2018</a>",
+          "Id": "c76cb0af-596e-4fb2-84de-a605ac75fff0",
+          "Position": 20
+        },
+        {
+          "Content": "On the Azure blog, Rob Caron (<a href=\"https://twitter.com/RobCaronMSFT\" data-mce-href=\"https://twitter.com/RobCaronMSFT\">@RobCaronMSFT</a>) presents <a href=\"https://azure.microsoft.com/blog/azure-source-volume-62/\" data-mce-href=\"https://azure.microsoft.com/blog/azure-source-volume-62/\">Azure.Source - Volume 62</a> and&nbsp;<a href=\"https://azure.microsoft.com/blog/azure-source-volume-63/\" data-mce-href=\"https://azure.microsoft.com/blog/azure-source-volume-63/\">Azure.Source Volume 63</a>",
+          "Id": "79ff43d2-f6db-4bc4-9ac6-26fd724bc630",
+          "Position": 21
+        },
+        {
+          "Content": "On MSDN, Mike Lapierre, David Lipien, Leonel Mora and Doug Owens say <a href=\"https://blogs.msdn.microsoft.com/premier_developer/2018/12/30/resolve-to-be-a-learn-it-all-with-new-azure-certifications/\" data-mce-href=\"https://blogs.msdn.microsoft.com/premier_developer/2018/12/30/resolve-to-be-a-learn-it-all-with-new-azure-certifications/\">Resolve to be a \"learn it all\" with new Azure Certifications!</a>",
+          "Id": "deb52e9e-ce6c-4d6d-b6a8-dfe2573f15c3",
+          "Position": 22
+        },
+        {
+          "Content": "Also on MSDN, Lee Stott (<a href=\"https://twitter.com/lee_stott\" data-mce-href=\"https://twitter.com/lee_stott\">@lee_stott</a>) walks through <a href=\"https://blogs.msdn.microsoft.com/uk_faculty_connection/2018/12/18/providing-students-access-to-centrally-provided-azure-resources-when-they-do-not-have-azure-subscription-credentials/\" data-mce-href=\"https://blogs.msdn.microsoft.com/uk_faculty_connection/2018/12/18/providing-students-access-to-centrally-provided-azure-resources-when-they-do-not-have-azure-subscription-credentials/\">Providing Students access to centrally provided Azure Resources when they do not have Azure Subscription credentials</a>",
+          "Id": "c7b1d342-ec4a-4e64-9596-75fec1dd60d6",
+          "Position": 23
+        },
+        {
+          "Content": "Also on MSDN, Ed Price (<a href=\"https://twitter.com/UserEd_\" data-mce-href=\"https://twitter.com/UserEd_\">@UserEd_</a>) highlights a new E-Book: <a href=\"https://blogs.msdn.microsoft.com/azurecat/2019/01/03/new-ebook-deploy-agisoft-photoscan-on-azure-with-avere-vfxt-for-azure-or-beegfs/\" data-mce-href=\"https://blogs.msdn.microsoft.com/azurecat/2019/01/03/new-ebook-deploy-agisoft-photoscan-on-azure-with-avere-vfxt-for-azure-or-beegfs/\">\"Deploy Agisoft PhotoScan on Azure with Avere vFXT for Azure or BeeGFS\"</a>",
+          "Id": "891ba6c5-8289-41e8-b1ca-92d212c08a8f",
+          "Position": 24
+        },
+        {
+          "Content": "Also on the Azure blog, Christine Alford (<a href=\"https://twitter.com/heyalford\" data-mce-href=\"https://twitter.com/heyalford\">@heyalford</a>) highlights <a href=\"https://azure.microsoft.com/blog/azure-marketplace-new-offers-volume-28/\" data-mce-href=\"https://azure.microsoft.com/blog/azure-marketplace-new-offers-volume-28/\">Azure Marketplace new offers</a>",
+          "Id": "32a17063-8821-4abc-a6c8-e8aac2f10025",
+          "Position": 25
+        }
+      ],
+      "Keywords": [
+        "\"Visual Studio\"",
+        "\" VS \"",
+        "\"VS Code\"",
+        "\"VSCode\"",
+        "\"Visual Studio Code\"",
+        "\"SDKs\"",
+        "\"SDK\"",
+        "\"Developer tool integrations\"",
+        "\"Developer tools\"",
+        "\"CLI\"",
+        "\"CLIs\"",
+        "\"command line\"",
+        "\"software development kit\"",
+        "\"devkit\"",
+        "\"Blockchain Workbench\""
+      ],
+      "Name": "Developer Tools",
+      "Position": 5
+    },
+    {
+      "Description": "Visual Studio Team Services (VSTS), Azure DevTest Labs, DevOps tool integrations, Azure DevOps Projects, Azure Lab Services",
+      "Id": "4ad19f8f-aa70-402b-9e2a-c7d7b50f852b",
+      "Items": [
+        {
+          "Content": "The Azure updates team announces: <a href=\"https://azure.microsoft.com/en-us/updates/azure-devtest-labs-cis-windows-server-2016-benchmark-l2-available-in-your-lab/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-devtest-labs-cis-windows-server-2016-benchmark-l2-available-in-your-lab/\">Azure DevTest Labs: CIS Windows Server 2016 Benchmark L2 available in your lab</a>!",
+          "Id": "6cada657-c68a-4abe-a008-e07809df328c",
+          "Position": 0
+        },
+        {
+          "Content": "On Channel 9, Aaron Bjork (<a href=\"https://twitter.com/aaronbjork\" data-mce-href=\"https://twitter.com/aaronbjork\">@aaronbjork</a>) talks about <a href=\"https://channel9.msdn.com/Blogs/DevOps-Interviews/How-the-Azure-DevOps-teams-plan-with-Arron-Bjork\" data-mce-href=\"https://channel9.msdn.com/Blogs/DevOps-Interviews/How-the-Azure-DevOps-teams-plan-with-Arron-Bjork\">How the Azure DevOps teams plan</a>",
+          "Id": "6ac439a2-0b90-4ec3-91f8-cbd5de890740",
+          "Position": 1
+        },
+        {
+          "Content": "On the Black Marble blog, Richard Fennell (<a href=\"https://twitter.com/richardfennell\" data-mce-href=\"https://twitter.com/richardfennell\">@richardfennell</a>) provides <a href=\"https://blogs.blackmarble.co.uk/rfennell/2018/12/18/a-task-for-documenting-your-azure-devops-pipeline-extensions-for-yaml-usage/\" data-mce-href=\"https://blogs.blackmarble.co.uk/rfennell/2018/12/18/a-task-for-documenting-your-azure-devops-pipeline-extensions-for-yaml-usage/\">A task for documenting your Azure DevOps Pipeline extensions for YAML usage</a>",
+          "Id": "94411714-3513-4ec7-aec1-60cf93d3a8a1",
+          "Position": 2
+        },
+        {
+          "Content": "On MSDN, Stephane Eyskens (<a href=\"https://twitter.com/stephaneeyskens\" data-mce-href=\"https://twitter.com/stephaneeyskens\">@stephaneeyskens</a>) describes <a href=\"http://blogs.msdn.microsoft.com/azuredev/2018/12/29/enforcing-security-controls-right-from-ci-cd-pipeline-with-azsk-deep-dive/\" data-mce-href=\"http://blogs.msdn.microsoft.com/azuredev/2018/12/29/enforcing-security-controls-right-from-ci-cd-pipeline-with-azsk-deep-dive/\">Enforcing security controls right from CI/CD pipeline with AzSK</a>",
+          "Id": "e85f66e2-20b6-4c58-994a-e98aa6feb05a",
+          "Position": 3
+        },
+        {
+          "Content": "On TechNet, Kamlesh Kumar (<a href=\"https://twitter.com/kkjha00007\" data-mce-href=\"https://twitter.com/kkjha00007\">@kkjha00007</a>) lists the <a href=\"https://blogs.technet.microsoft.com/wikininjas/2018/12/15/top-contributors-awards-azure-devops-survival-guide-and-many-more/\" data-mce-href=\"https://blogs.technet.microsoft.com/wikininjas/2018/12/15/top-contributors-awards-azure-devops-survival-guide-and-many-more/\">Top Contributors Awards! Azure DevOps: Survival Guide and many more!</a>",
+          "Id": "c09a526f-6b14-4937-a20d-2eb9d5cdd926",
+          "Position": 4
+        },
+        {
+          "Content": "Abel Wang (<a href=\"https://twitter.com/AbelSquidHead\" data-mce-href=\"https://twitter.com/AbelSquidHead\">@AbelSquidHead</a>) discusses <a href=\"https://mountainss.wordpress.com/2018/12/27/microsoft-azuredevops-azure-pipelines-azure-boards-github-with-abelsquidhead-loecda/\" data-mce-href=\"https://mountainss.wordpress.com/2018/12/27/microsoft-azuredevops-azure-pipelines-azure-boards-github-with-abelsquidhead-loecda/\">Microsoft AzureDevOps – Azure Pipelines, Azure Boards + GitHub</a>",
+          "Id": "adc81033-37c2-4a54-a877-f0b3cc774602",
+          "Position": 5
+        }
+      ],
+      "Keywords": [
+        "\"Visual Studio Team Services\"",
+        "\"VSTS\"",
+        "\"DevTest Labs\"",
+        "Labs",
+        "\"DevTest\"",
+        "\"DevOps Projects\"",
+        "\"DevOps\"",
+        "\"Projects\"",
+        "\"CICD\"",
+        "\"CI/CD\"",
+        "\"CI\"",
+        "\"CD\"",
+        "\"continuous integration\"",
+        "\"continuous delivery\"",
+        "\"continuous deployment\"",
+        "\"release management\"",
+        "\"Azure Lab Services\"",
+        "\"Lab Services\""
+      ],
+      "Name": "DevOps",
+      "Position": 6
+    },
+    {
+      "Description": "Azure Active Directory, Multi-factor Authentication, Azure Active Directory Domain Services, Azure Active Directory B2C",
+      "Id": "f57fec6e-6e39-440d-a501-4c38869a49ce",
+      "Items": [
+        {
+          "Content": "On Code Project, Allen O'Neil (<a href=\"https://twitter.com/ajsondev\" data-mce-href=\"https://twitter.com/ajsondev\">@ajsondev</a>) gives an <a href=\"https://www.codeproject.com/Articles/1273183/Overview-of-Azure-Active-Directory\" data-mce-href=\"https://www.codeproject.com/Articles/1273183/Overview-of-Azure-Active-Directory\">Overview of Azure Active Directory</a>",
+          "Id": "33f630ec-1b79-4a37-bbf0-4fc2a72a38d3",
+          "Position": 0
+        },
+        {
+          "Content": "David O'Brien (<a href=\"https://twitter.com/david_obrien\" data-mce-href=\"https://twitter.com/david_obrien\">@david_obrien</a>) blogs about <a href=\"https://david-obrien.net/2018/12/azure-ad-api-logs-flaws\" data-mce-href=\"https://david-obrien.net/2018/12/azure-ad-api-logs-flaws\">the flaws in Azure AD Logs in Log Analytics</a>",
+          "Id": "5ce21fbe-fb5c-4cde-8b51-7332e6a6906a",
+          "Position": 1
+        },
+        {
+          "Content": "Daniel Krzyczkowski (<a href=\"https://twitter.com/DKrzyczkowski\" data-mce-href=\"https://twitter.com/DKrzyczkowski\">@DKrzyczkowski</a>) covers <a href=\"https://devislandblog.wordpress.com/2019/01/02/microsoft-azure-ad-b2c-custom-policies-with-identity-experience-framework/\" data-mce-href=\"https://devislandblog.wordpress.com/2019/01/02/microsoft-azure-ad-b2c-custom-policies-with-identity-experience-framework/\">Microsoft Azure AD B2C – Custom Policies with Identity Experience Framework</a>",
+          "Id": "8094b297-b1f6-41ec-b7a7-7db7d0637f4e",
+          "Position": 2
+        },
+        {
+          "Content": "On TechNet, Goran Mihelčić gives a <a href=\"https://blogs.technet.microsoft.com/meamcs/2018/12/26/step-by-step-mim-pam-setup-and-evaluation-guide-part-1/\" data-mce-href=\"https://blogs.technet.microsoft.com/meamcs/2018/12/26/step-by-step-mim-pam-setup-and-evaluation-guide-part-1/\">Step by step MIM PAM setup and evaluation Guide (Part 1)</a>",
+          "Id": "930857df-d7d9-452b-883d-d1bee47d5fae",
+          "Position": 3
+        }
+      ],
+      "Keywords": [
+        "\"Azure Active Directory\"",
+        "\"Azure AD\"",
+        "\"AAD",
+        "\" \"Multi-factor Authentication\"",
+        "\"MFA\"",
+        "\"Azure Active Directory Domain Services\"",
+        "\"AAD Domain Services\"",
+        "\"Active Directory B2C\"",
+        "\"AAD B2C\"",
+        "\"B2C\"",
+        "\"authentication\"",
+        "\"auth\"",
+        "\"accounts\"",
+        "\"credentials\""
+      ],
+      "Name": "Identity",
+      "Position": 7
+    },
+    {
+      "Description": "Service Bus, Logic Apps, Event Grid",
+      "Id": "8cd826ce-cf04-463c-9248-8ba23118b0c1",
+      "Items": [
+        {
+          "Content": "The Azure updates team announces that <a href=\"https://azure.microsoft.com/en-us/updates/azure-scheduler-will-retire-on-september-30-2019/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-scheduler-will-retire-on-september-30-2019/\">Azure Scheduler will retire on September 30, 2019</a> and that <a href=\"https://azure.microsoft.com/en-us/updates/azure-service-bus-and-azure-event-hubs-virtual-networks-and-firewall-rules-are-now-generally-available/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-service-bus-and-azure-event-hubs-virtual-networks-and-firewall-rules-are-now-generally-available/\">Azure Service Bus and Azure Event Hubs Virtual Networks and Firewall rules are now generally available</a>",
+          "Id": "c4ff1f85-17cc-4fef-a797-0dd47eaf7bea",
+          "Position": 0
+        },
+        {
+          "Content": "Mark Heath (<a href=\"https://twitter.com/mark_heath\" data-mce-href=\"https://twitter.com/mark_heath\">@mark_heath</a>) walks through <a href=\"http://feedproxy.google.com/~r/soundcode/~3/v52Kq5I6ujo/migrating-to-new-servicebus-sdk\" data-mce-href=\"http://feedproxy.google.com/~r/soundcode/~3/v52Kq5I6ujo/migrating-to-new-servicebus-sdk\">Migrating to the New Azure Service Bus SDK</a>",
+          "Id": "d8bd2107-432c-4515-98d7-37c8ed08c880",
+          "Position": 1
+        },
+        {
+          "Content": "On Code Project, Roman Kiss describes the <a href=\"https://www.codeproject.com/Articles/1254463/Azure-Event-Grid-Tester\" data-mce-href=\"https://www.codeproject.com/Articles/1254463/Azure-Event-Grid-Tester\">Azure Event Grid Tester</a>",
+          "Id": "65d2a38e-3e02-4706-b3e2-9dd6a20a310d",
+          "Position": 2
+        },
+        {
+          "Content": "On the Serverless360 blog, Sean Feldman (<a href=\"https://twitter.com/sfeldman\" data-mce-href=\"https://twitter.com/sfeldman\">@sfeldman</a>) describes <a href=\"https://www.serverless360.com/blog/auto-forwarding-a-hidden-gem-of-service-bus\" data-mce-href=\"https://www.serverless360.com/blog/auto-forwarding-a-hidden-gem-of-service-bus\">Auto Forwarding, a hidden gem of Service Bus</a>",
+          "Id": "ad75f96c-ba03-484b-a67f-253268945a1e",
+          "Position": 3
+        },
+        {
+          "Content": "Also on the Serverless360 blog, Steef-Jan Wiggers (<a href=\"https://twitter.com/SteefJan\" data-mce-href=\"https://twitter.com/SteefJan\">@SteefJan</a>) discusses <a href=\"https://www.serverless360.com/blog/azure-durable-functions-patterns-best-practices\" data-mce-href=\"https://www.serverless360.com/blog/azure-durable-functions-patterns-best-practices\">Azure Durable Functions – Patterns &amp; Best Practices</a>",
+          "Id": "312acf7b-a127-4d43-96bc-799d6dd68814",
+          "Position": 4
+        },
+        {
+          "Content": "Also on the Serverless360 blog, Surya Venkatasubramanian discusses <a href=\"https://www.serverless360.com/blog/building-intelligent-serverless-applications-using-azure\" data-mce-href=\"https://www.serverless360.com/blog/building-intelligent-serverless-applications-using-azure\">Building Intelligent Serverless Applications using Azure</a>",
+          "Id": "86ff1959-05b4-4ae0-89da-ef2ed81b606a",
+          "Position": 5
+        }
+      ],
+      "Keywords": [
+        "\"Service Bus\"",
+        "\"Logic Apps\"",
+        "\"Logic App\"",
+        "\"Event Grid\"",
+        "\"BizTalk\""
+      ],
+      "Name": "Integration",
+      "Position": 8
+    },
+    {
+      "Description": "IoT Hub, IoT Suite, IoT Edge, IoT Central, IoT solution accelerators, Time Series Insights, Azure Maps, Azure Sphere",
+      "Id": "f8227a7d-54d5-46fb-9fc2-2dfd45d8e025",
+      "Items": [
+        {
+          "Content": "On MSDN, Microsoft Azure (<a href=\"https://twitter.com/Azure\" data-mce-href=\"https://twitter.com/Azure\">@Azure</a>) highlights <a href=\"https://azure.microsoft.com/en-us/blog/the-biggest-iot-stories-of-2018/\" data-mce-href=\"https://azure.microsoft.com/en-us/blog/the-biggest-iot-stories-of-2018/\">The biggest IoT stories of 2018</a>",
+          "Id": "f51844b3-102a-11e9-bef3-8989506e5921",
+          "Position": 0
+        },
+        {
+          "Content": "On Code Project, Sibeesh Passion (<a href=\"https://twitter.com/SibeeshVenu\" data-mce-href=\"https://twitter.com/SibeeshVenu\">@SibeeshVenu</a>) blogs about <a href=\"https://www.codeproject.com/Articles/1272944/IoTHubTrigger-Azure-Function-and-Azure-IoT-Hub\" data-mce-href=\"https://www.codeproject.com/Articles/1272944/IoTHubTrigger-Azure-Function-and-Azure-IoT-Hub\">IoTHubTrigger Azure Function and Azure IoT Hub</a> and <a href=\"https://www.codeproject.com/Articles/1273206/Realtime-Serverless-IoT-Data-using-Azure-SignalR-a\" data-mce-href=\"https://www.codeproject.com/Articles/1273206/Realtime-Serverless-IoT-Data-using-Azure-SignalR-a\">Realtime Serverless IoT Data using Azure SignalR and Azure Functions in Angular</a>",
+          "Id": "e46fcfc7-5208-47de-a87a-10fdc906ed3c",
+          "Position": 1
+        },
+        {
+          "Content": "On the Azure blog, Ed Nightingale discusses the <a href=\"https://azure.microsoft.com/blog/anatomy-of-a-secured-mcu/\" data-mce-href=\"https://azure.microsoft.com/blog/anatomy-of-a-secured-mcu/\">Anatomy of a secured MCU</a>",
+          "Id": "7b847ddb-3a18-424d-a43a-102c112f7949",
+          "Position": 2
+        },
+        {
+          "Content": "On Channel 9, Remco Ploeg (<a href=\"https://twitter.com/remcoploeg\" data-mce-href=\"https://twitter.com/remcoploeg\">@remcoploeg</a>) shows <a href=\"https://channel9.msdn.com/Shows/Internet-of-Things-Show/Live-demo-of-BeSense-an-application-built-by-Winvision-on-Azure-Digital-Twins\" data-mce-href=\"https://channel9.msdn.com/Shows/Internet-of-Things-Show/Live-demo-of-BeSense-an-application-built-by-Winvision-on-Azure-Digital-Twins\">a live demo of BeSense, an application built by Winvision on Azure Digital Twins</a>",
+          "Id": "d88d21c1-9653-422d-8fba-826cc168b814",
+          "Position": 3
+        },
+        {
+          "Content": "The Azure updates team announces the <a href=\"https://azure.microsoft.com/en-us/updates/iot-edge1-0-5/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/iot-edge1-0-5/\">Azure IoT Edge 1.0.5 release</a>",
+          "Id": "1b839004-c344-4191-807d-e471c38486e5",
+          "Position": 4
+        },
+        {
+          "Content": "On Channel 9, Pericles Alves (<a href=\"https://twitter.com/PericlesAlves\" data-mce-href=\"https://twitter.com/PericlesAlves\">@PericlesAlves</a>) talks about how to <a href=\"https://channel9.msdn.com/Shows/Internet-of-Things-Show/Connect-devices-from-other-IoT-clouds-to-Azure-IoT-Central\" data-mce-href=\"https://channel9.msdn.com/Shows/Internet-of-Things-Show/Connect-devices-from-other-IoT-clouds-to-Azure-IoT-Central\">Connect devices from other IoT clouds to Azure IoT Central</a>",
+          "Id": "be008e68-4cdd-4dc1-822c-b425736b4dbb",
+          "Position": 5
+        },
+        {
+          "Content": "Daniel Neumann (<a href=\"https://twitter.com/neumanndaniel\" data-mce-href=\"https://twitter.com/neumanndaniel\">@neumanndaniel</a>) discusses <a href=\"https://www.danielstechblog.io/stream-analytics-on-iot-edge-deployment-changes/\" data-mce-href=\"https://www.danielstechblog.io/stream-analytics-on-iot-edge-deployment-changes/\">Stream Analytics on IoT Edge – deployment changes</a>",
+          "Id": "599b3214-4949-4c10-9b14-b8cc078bd8e5",
+          "Position": 6
+        },
+        {
+          "Content": "Also on MSDN, Richard Newell writes about <a href=\"https://blogs.msdn.microsoft.com/premier_developer/2018/12/21/remote-monitoring-of-iot-devices-using-azure-and-hololens/\" data-mce-href=\"https://blogs.msdn.microsoft.com/premier_developer/2018/12/21/remote-monitoring-of-iot-devices-using-azure-and-hololens/\">Remote Monitoring of IoT Devices Using Azure and HoloLens</a>",
+          "Id": "a4f87290-0f65-11e9-b72e-2fa8cf86ebed",
+          "Position": 7
+        },
+        {
+          "Content": "On MSDN, Nathan Vanderby describes a <a href=\"https://blogs.msdn.microsoft.com/premier_developer/2018/12/23/sonarqube-hosted-on-azure-app-service/\" data-mce-href=\"https://blogs.msdn.microsoft.com/premier_developer/2018/12/23/sonarqube-hosted-on-azure-app-service/\">SonarQube Hosted On Azure App Service</a>",
+          "Id": "bdf0961d-1952-4606-a657-44dde57e1fa3",
+          "Position": 8
+        }
+      ],
+      "Keywords": [
+        "\"IoT Hub\"",
+        "\"IoT Suite\"",
+        "\"Time Series Insights\"",
+        "\"IoT Edge\"",
+        "\"Azure Maps\"",
+        "\"Location Based Services\"",
+        "\"Azure Sphere\"",
+        "\"Sphere\"",
+        "\"IoT\"",
+        "\"Internet of Things\"",
+        "\"Edge AI\"",
+        "\"Edge\"",
+        "\"Raspberry Pi\"",
+        "\"device management\"",
+        "\"IoT Central\"",
+        "\"IoT solution accelerators\"",
+        "\"solution accelerator\""
+      ],
+      "Name": "Internet of Things",
+      "Position": 9
+    },
+    {
+      "Description": "Backup, Site Recovery, App Insights, Azure Advisor, Sceduler, Automation, Log Analytics, Azure Monitor, Security & Compliance, Protection & Recovery, Automation & Control, Insight & Analytics, Azure Service Health, Microsoft Azure portal, Azure Resource Manager, Cloud Shell, the Azure mobile app, Azure Policy, Cost Management, Azure Managed Applications",
+      "Id": "986de3a2-525d-4ef1-928f-20e18448689d",
+      "Items": [
+        {
+          "Content": "On the Kloud blog, Asish Padhy (<a href=\"https://twitter.com/asishpadhy\" data-mce-href=\"https://twitter.com/asishpadhy\">@asishpadhy</a>) explains how to <a href=\"https://blog.kloud.com.au/2018/12/21/retrieve-office-365-audit-logs-using-powershell-and-store-in-azure-table-for-quick-retrieval/\" data-mce-href=\"https://blog.kloud.com.au/2018/12/21/retrieve-office-365-audit-logs-using-powershell-and-store-in-azure-table-for-quick-retrieval/\">Retrieve Office 365 Audit logs using PowerShell and store in Azure table for quick retrieval</a>",
+          "Id": "b3434270-edfd-4db3-8843-c3b1a7aade8b",
+          "Position": 0
+        },
+        {
+          "Content": "On the MSSQL Tips site, John Martin (<a href=\"https://twitter.com/SQLDiplomat\" data-mce-href=\"https://twitter.com/SQLDiplomat\">@SQLDiplomat</a>) explains how to <a href=\"http://feedproxy.google.com/~r/MSSQLTips-LatestSqlServerTips/~3/i_ceYwcee-g/\" data-mce-href=\"http://feedproxy.google.com/~r/MSSQLTips-LatestSqlServerTips/~3/i_ceYwcee-g/\">Install DBATools with Azure VM Custom Script Extension Azure Portal</a> and John Miner explains how to <a href=\"http://feedproxy.google.com/~r/MSSQLTips-LatestSqlServerTips/~3/lA6PqlTDpdQ/\" data-mce-href=\"http://feedproxy.google.com/~r/MSSQLTips-LatestSqlServerTips/~3/lA6PqlTDpdQ/\">Update an Azure SQL Data Mart with ADLS files</a>",
+          "Id": "6f43a8ab-1b35-4ed9-ae2b-65b9681fc39f",
+          "Position": 1
+        },
+        {
+          "Content": "Henry Been (<a href=\"https://twitter.com/henry_been\" data-mce-href=\"https://twitter.com/henry_been\">@henry_been</a>) describes how to <a href=\"https://www.henrybeen.nl/azure-policy-part-3-automatically-fix-or-augment-unwanted-arm-template-deployments/\" data-mce-href=\"https://www.henrybeen.nl/azure-policy-part-3-automatically-fix-or-augment-unwanted-arm-template-deployments/\">Automatically fix or augment unwanted ARM template deployments</a>",
+          "Id": "075f8530-0f58-11e9-b72e-2fa8cf86ebed",
+          "Position": 2
+        },
+        {
+          "Content": "On the Azure blog, Mark Cowlishaw announces <a href=\"https://azure.microsoft.com/blog/azure-powershell-az-module-version-1/\" data-mce-href=\"https://azure.microsoft.com/blog/azure-powershell-az-module-version-1/\">Azure PowerShell Az Module version 1.0</a>",
+          "Id": "4f11a1ad-9b0a-45e3-8149-a40394675db1",
+          "Position": 3
+        },
+        {
+          "Content": "The Azure updates team blogs about <a href=\"https://azure.microsoft.com/en-us/updates/ciagent12182018/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/ciagent12182018/\">Azure Monitor for Containers agent updates</a>, announces that <a href=\"https://azure.microsoft.com/en-us/updates/azure-log-analytics-is-available-in-west-us-2/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-log-analytics-is-available-in-west-us-2/\">Azure Log Analytics is available in West US 2</a> and that <a href=\"https://azure.microsoft.com/en-us/updates/log-analytics-solutions-and-views-will-soon-drill-in-to-the-new-logs-ux/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/log-analytics-solutions-and-views-will-soon-drill-in-to-the-new-logs-ux/\">Log Analytics solutions and views will soon drill in to the new Logs UX</a>",
+          "Id": "72522118-bf19-45bd-88c5-27633d2de670",
+          "Position": 4
+        },
+        {
+          "Content": "On MSDN, Lee Stott (<a href=\"https://twitter.com/lee_stott\" data-mce-href=\"https://twitter.com/lee_stott\">@lee_stott</a>) blogs about running a <a href=\"https://blogs.msdn.microsoft.com/uk_faculty_connection/2018/12/18/data-science-virtual-machine-with-gpu-for-0-18-hour-using-low-priority-vms/\" data-mce-href=\"https://blogs.msdn.microsoft.com/uk_faculty_connection/2018/12/18/data-science-virtual-machine-with-gpu-for-0-18-hour-using-low-priority-vms/\">Data Science Virtual Machine with GPU for $0.18/Hour using Low Priority VMs</a>",
+          "Id": "9843ca1c-c80f-4a75-8420-7fff54fad771",
+          "Position": 5
+        },
+        {
+          "Content": "On TechNet, Ed Price (<a href=\"https://twitter.com/UserEd_\" data-mce-href=\"https://twitter.com/UserEd_\">@UserEd_</a>) presents an <a href=\"https://blogs.technet.microsoft.com/wikininjas/2018/12/31/interview-with-a-wiki-ninja-and-backup-recovery-expert-leon-laude/\" data-mce-href=\"https://blogs.technet.microsoft.com/wikininjas/2018/12/31/interview-with-a-wiki-ninja-and-backup-recovery-expert-leon-laude/\">Interview with a Wiki Ninja and Backup/Recovery Expert – Leon Laude</a>",
+          "Id": "9cfbf671-876c-4bd1-8ff7-e805745f3346",
+          "Position": 6
+        },
+        {
+          "Content": "Stanislav Zhelyazkov (<a href=\"https://twitter.com/StanZhelyazkov\" data-mce-href=\"https://twitter.com/StanZhelyazkov\">@StanZhelyazkov</a>) describes <a href=\"https://cloudadministrator.net/2018/12/17/finding-diagnostic-logs-for-azure-services/\" data-mce-href=\"https://cloudadministrator.net/2018/12/17/finding-diagnostic-logs-for-azure-services/\">Finding Diagnostic Logs for Azure Services</a>",
+          "Id": "1d8a2dbb-6a99-413d-8ee1-53c2becd05b3",
+          "Position": 7
+        },
+        {
+          "Content": "On the Microsoft Cloud IT Pro Podcast, Ben Stegink (<a href=\"https://twitter.com/benstegink\" data-mce-href=\"https://twitter.com/benstegink\">@benstegink</a><span style=\"color: #545454; font-family: arial, sans-serif; font-size: small;\" data-mce-style=\"color: #545454; font-family: arial, sans-serif; font-size: small;\">)</span>&nbsp;and Scott Hoag (<a href=\"https://twitter.com/ciphertxt?lang=en\" data-mce-href=\"https://twitter.com/ciphertxt?lang=en\">@ciphertxt</a>) present <a href=\"https://www.msclouditpropodcast.com/episode105/\" data-mce-href=\"https://www.msclouditpropodcast.com/episode105/\">Episode 105 – From AzureRm to Az in Azure PowerShell</a>",
+          "Id": "5f1be5ca-606b-4fa2-bcff-ac943e8152b7",
+          "Position": 8
+        },
+        {
+          "Content": "Stefan Roth (<a href=\"https://twitter.com/stefanroth_net\" data-mce-href=\"https://twitter.com/stefanroth_net\">@stefanroth_net</a>) describes the <a href=\"https://www.stefanroth.net/2018/12/19/azure-bot-service-max-automation-and-monitoring-bot/\" data-mce-href=\"https://www.stefanroth.net/2018/12/19/azure-bot-service-max-automation-and-monitoring-bot/\">Azure Bot Service – MAX Automation and Monitoring Bot</a>",
+          "Id": "7a838225-9b8b-4ab5-a984-5f809d2613c7",
+          "Position": 9
+        },
+        {
+          "Content": "Sam Cogan (<a href=\"https://twitter.com/samcogan\" data-mce-href=\"https://twitter.com/samcogan\">@samcogan</a>) explains how to <a href=\"https://samcogan.com/do-more-with-arm-templates-using-functions/\" data-mce-href=\"https://samcogan.com/do-more-with-arm-templates-using-functions/\">Do More With ARM Templates using Functions</a>",
+          "Id": "bb4ee9a4-32b9-4871-8578-2670b0c28320",
+          "Position": 10
+        },
+        {
+          "Content": "Also on the Kloud blog, Darren Robinson (<a href=\"https://twitter.com/darrenjrobinson\" data-mce-href=\"https://twitter.com/darrenjrobinson\">@darrenjrobinson</a>) covers <a href=\"https://blog.kloud.com.au/2018/12/20/azure-self-service-password-reset-reporting-using-powershell/\" data-mce-href=\"https://blog.kloud.com.au/2018/12/20/azure-self-service-password-reset-reporting-using-powershell/\">Azure Self Service Password Reset Reporting using PowerShell</a>",
+          "Id": "b7a5a297-d71f-4d7d-ba11-16c1a6e6b1ca",
+          "Position": 11
+        },
+        {
+          "Content": "The Azure updates team announces <a href=\"https://azure.microsoft.com/en-us/updates/azure-api-management-update-dec-28-2018/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azure-api-management-update-dec-28-2018/\">Azure API Management update from December 20th</a>",
+          "Id": "44cd47ee-b92f-4714-92d2-83f06453bc1a",
+          "Position": 12
+        }
+      ],
+      "Keywords": [
+        "\"Backup\"",
+        "\"Site Recovery\"",
+        "\"App Insights\"",
+        "\"Azure Advisor\"",
+        "\"Advisor\"",
+        "\"Sceduler\"",
+        "\"Automation\"",
+        "\"Log Analytics\"",
+        "\"Azure Monitor\"",
+        "\"Security & Compliance\"",
+        "\"Protection & Recovery\"",
+        "\"Automation & Control\"",
+        "\"Insight & Analytics\"",
+        "\"Service Health\"",
+        "\"Microsoft Azure portal\"",
+        "\"portal\"",
+        "\"ARM\"",
+        "\"Resource Manager\"",
+        "\"PowerShell\"",
+        "\"Azure Resource Manager\"",
+        "\"Cloud Shell\"",
+        "\"Azure mobile app\"",
+        "\"Azure Policy\"",
+        "\"Cost Management\"",
+        "\"Azure Managed Applications\"",
+        "\"Operations Management Suite\"",
+        "\"OMS\"",
+        "\"MSOMS\"",
+        "monitoring",
+        "Alerts"
+      ],
+      "Name": "Management and Governance",
+      "Position": 10
+    },
+    {
+      "Description": "Media services, Encoding, Live and On-Demand Streaming, Azure Media Player, Content Protection, Media Analytics, Video Indexer",
+      "Id": "e1f42c63-94fb-49ee-9fd6-e169ff29d8c1",
+      "Items": [
+        {
+          "Content": "The Azure updates team announces the <a href=\"https://azure.microsoft.com/en-us/updates/retirement-of-media-hyperlapse-in-preview-on-march-29-2019/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/retirement-of-media-hyperlapse-in-preview-on-march-29-2019/\">Retirement of Media Hyperlapse in preview on March 29, 2019</a>",
+          "Id": "1a209143-dc31-442a-b7e8-06efb1e13438",
+          "Position": 0
+        }
+      ],
+      "Keywords": [
+        "\"Media services\"",
+        "\"Encoding\"",
+        "\"Live and On-Demand Streaming\"",
+        "\"Azure Media Player\"",
+        "\"Content Protection\"",
+        "\"Media Analytics\"",
+        "\"Video Indexer\"",
+        "\"Media\"",
+        "\"AES\"",
+        "\"PlayReady\"",
+        "\"Widevine\"",
+        "\"Fairplay\""
+      ],
+      "Name": "Media",
+      "Position": 11
+    },
+    {
+      "Description": "Azure Stack",
+      "Id": "9b096c5a-2aa2-4ba4-86fd-2ec249139806",
+      "Items": [
+        {
+          "Content": "On the MSSQL Tips site, Koen Verbeeck (<a href=\"https://twitter.com/Ko_Ver\" data-mce-href=\"https://twitter.com/Ko_Ver\">@Ko_Ver</a>) explains how to <a href=\"http://feedproxy.google.com/~r/MSSQLTips-LatestSqlServerTips/~3/ZC9I9ATt6Z4/\" data-mce-href=\"http://feedproxy.google.com/~r/MSSQLTips-LatestSqlServerTips/~3/ZC9I9ATt6Z4/\">Connect to On-premises Data in Azure Data Factory with the Self-hosted Integration Runtime Part 2</a>",
+          "Id": "262a1834-9639-4ddb-bc45-3a06b8072509",
+          "Position": 0
+        },
+        {
+          "Content": "Thomas Maurer (<a href=\"https://twitter.com/thomasmaurer\" data-mce-href=\"https://twitter.com/thomasmaurer\">@thomasmaurer</a>) explains how to <a href=\"https://www.thomasmaurer.ch/2019/01/extended-security-updates-sql-windows-server-2008-azure-stack/\" data-mce-href=\"https://www.thomasmaurer.ch/2019/01/extended-security-updates-sql-windows-server-2008-azure-stack/\">Extended Security Updates for SQL Server and Windows Server 2008 and 2008 R2 on Azure Stack</a>",
+          "Id": "d48bda50-b089-4aee-89ee-944a63a3ebd1",
+          "Position": 0
+        },
+        {
+          "Content": "On the Azure blog, Ricardo Mendes (<a href=\"https://twitter.com/rlfmendes\" data-mce-href=\"https://twitter.com/rlfmendes\">@rlfmendes</a>) explores <a href=\"https://azure.microsoft.com/blog/the-year-in-review-hybrid-applications-for-developers/\" data-mce-href=\"https://azure.microsoft.com/blog/the-year-in-review-hybrid-applications-for-developers/\">The year in review: Hybrid applications for developers</a>",
+          "Id": "31c65d10-e69c-4654-bcb1-13033624265f",
+          "Position": 1
+        },
+        {
+          "Content": "Thomas Maurer (<a href=\"https://twitter.com/thomasmaurer\" data-mce-href=\"https://twitter.com/thomasmaurer\">@thomasmaurer</a>) announces <a href=\"https://www.thomasmaurer.ch/2019/01/extended-security-updates-sql-windows-server-2008-azure-stack/\" data-mce-href=\"https://www.thomasmaurer.ch/2019/01/extended-security-updates-sql-windows-server-2008-azure-stack/\">Extended Security Updates for SQL Server and Windows Server 2008 and 2008 R2 on Azure Stack</a>",
+          "Id": "7b7827a4-98e1-42ae-9ed8-cc530fb7a98b",
+          "Position": 2
+        },
+        {
+          "Content": "On MSDN, Wriju Ghosh (<a href=\"https://twitter.com/wrijugh\" data-mce-href=\"https://twitter.com/wrijugh\">@wrijugh</a>) explains how to <a href=\"https://blogs.msdn.microsoft.com/wriju/2018/12/20/start-free-with-azure-stack-development-kit/\" data-mce-href=\"https://blogs.msdn.microsoft.com/wriju/2018/12/20/start-free-with-azure-stack-development-kit/\">Start Free with Azure Stack Development Kit</a>",
+          "Id": "7d5c1894-d0b2-4b44-818c-ecfeed71d6e3",
+          "Position": 3
+        },
+        {
+          "Content": "On the Azure blog, Rob Caron (<a href=\"https://twitter.com/RobCaronMSFT\" data-mce-href=\"https://twitter.com/RobCaronMSFT\">@RobCaronMSFT</a>) lists the <a href=\"https://azure.microsoft.com/blog/top-3-free-resources-developers-need-for-learning-azure/\" data-mce-href=\"https://azure.microsoft.com/blog/top-3-free-resources-developers-need-for-learning-azure/\">Top 3 free resources developers need for learning Azure</a>",
+          "Id": "947d45be-0ce4-46a9-96a6-636276fea578",
+          "Position": 4
+        }
+      ],
+      "Keywords": [
+        "Stack",
+        "\"Azure Stack\"",
+        "\"Microsoft Azure Stack\"",
+        "\"on-premises\"",
+        "\"hybrid cloud\"",
+        "\"hybrid\""
+      ],
+      "Name": "Microsoft Azure Stack",
+      "Position": 12
+    },
+    {
+      "Description": "Azure Database Migration Service, Azure Migrate, Data Box",
+      "Id": "bcb5f393-25da-4afc-aa27-7e2a6740c824",
+      "Items": [
+        {
+          "Content": "The Azure updates team announces <a href=\"https://azure.microsoft.com/en-us/updates/premium-tier-now-available-for-the-azure-database-migration-service/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/premium-tier-now-available-for-the-azure-database-migration-service/\">Premium tier now available for the Azure Database Migration Service</a>, <a href=\"https://azure.microsoft.com/en-us/updates/support-for-sql-to-azure-sql-db-managed-instance-online-migrations-2/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/support-for-sql-to-azure-sql-db-managed-instance-online-migrations-2/\">Support for SQL to Azure SQL DB Managed Instance online migrations</a> and discusses <a href=\"https://azure.microsoft.com/en-us/updates/migrating-to-az-apimanagement-powershell-module/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/migrating-to-az-apimanagement-powershell-module/\">Migrating to the Az.ApiManagement PowerShell module</a>",
+          "Id": "b3a4dbc6-2c74-447d-9d25-b52f857b829f",
+          "Position": 0
+        },
+        {
+          "Content": "Simon Waight (<a href=\"https://twitter.com/simonwaight\" data-mce-href=\"https://twitter.com/simonwaight\">@simonwaight</a>) explains how to <a href=\"https://blog.siliconvalve.com/2018/12/27/migrate-a-static-website-from-aws-to-azure/\" data-mce-href=\"https://blog.siliconvalve.com/2018/12/27/migrate-a-static-website-from-aws-to-azure/\">Migrate a static website from AWS to Azure</a>",
+          "Id": "bb7e2837-1a13-4283-8aa6-3ae8177ebcde",
+          "Position": 1
+        },
+        {
+          "Content": "On the Azure blog, Madeleine Clayton describes <a href=\"https://azure.microsoft.com/blog/how-to-migrate-from-azurerm-to-az-in-azure-powershell/\" data-mce-href=\"https://azure.microsoft.com/blog/how-to-migrate-from-azurerm-to-az-in-azure-powershell/\">How to migrate from AzureRM to Az in Azure PowerShell</a>",
+          "Id": "e1e624f4-064c-4980-a1df-c499e666e43d",
+          "Position": 2
+        },
+        {
+          "Content": "The Azure updates team announces that <a href=\"https://azure.microsoft.com/en-us/updates/azuremigrate-supports-azuregov/\" data-mce-href=\"https://azure.microsoft.com/en-us/updates/azuremigrate-supports-azuregov/\">Azure Migrate is now available in Azure Government</a>",
+          "Id": "1bd85cfe-f850-41d1-83ba-c7ec363455bd",
+          "Position": 3
+        },
+        {
+          "Content": "On MSDN, Raj Pochiraju announces <a href=\"https://blogs.msdn.microsoft.com/datamigration/2018/12/21/announcing-general-availability-of-azure-database-migration-service-dms-premium-tier/\" data-mce-href=\"https://blogs.msdn.microsoft.com/datamigration/2018/12/21/announcing-general-availability-of-azure-database-migration-service-dms-premium-tier/\">General Availability of Azure Database Migration Service DMS Premium Tier</a>",
+          "Id": "1fb845b4-7115-4d65-9e9a-7c1a8b55833c",
+          "Position": 4
+        }
+      ],
+      "Keywords": [
+        "Migration",
+        "\"Database Migration Service\"",
+        "\"Azure Migrate\"",
+        "\"Data Box\"",
+        "\"data transfer\""
+      ],
+      "Name": "Migration",
+      "Position": 13
+    },
+    {
+      "Description": "App Service (Mobile), Notification Hubs, Mobile apps, API apps, Visual Studio App Centre, Xamarin",
+      "Id": "3cf95f9e-2b79-418b-9e53-dc813d6085c5",
+      "Items": [
+        {
+          "Content": "On the Xamarin blog, James Montemagno (<a href=\"https://twitter.com/JamesMontemagno\" data-mce-href=\"https://twitter.com/JamesMontemagno\">@JamesMontemagno</a>) talks about <a href=\"https://blog.xamarin.com/accessing-native-features-xamarin-essentials/\" data-mce-href=\"https://blog.xamarin.com/accessing-native-features-xamarin-essentials/\">Accessing Native Features the Cross-Platform Way with Xamarin.Essentials</a>",
+          "Id": "6f560070-e410-454e-84b3-1e71359bf032",
+          "Position": 0
+        },
+        {
+          "Content": "On Channel 9, Christos Matskas (<a href=\"https://twitter.com/ChristosMatskas\" data-mce-href=\"https://twitter.com/ChristosMatskas\">@ChristosMatskas</a>) showcases <a href=\"https://channel9.msdn.com/Shows/XamarinShow/Visual-Azure-Provisioning-From-a-Whiteboard\" data-mce-href=\"https://channel9.msdn.com/Shows/XamarinShow/Visual-Azure-Provisioning-From-a-Whiteboard\">Visual Azure Provisioning From a Whiteboard The Xamarin Show</a>",
+          "Id": "8270a6fd-d304-498a-a1fb-f26fd4bddc15",
+          "Position": 1
+        },
+        {
+          "Content": "Also on the Xamarin blog, Jayme Singleton (<a href=\"https://twitter.com/JaymeSingleton1\" data-mce-href=\"https://twitter.com/JaymeSingleton1\">@JaymeSingleton1</a>) highlights <a href=\"https://blog.xamarin.com/xamarin-and-net-community-events-in-january/\" data-mce-href=\"https://blog.xamarin.com/xamarin-and-net-community-events-in-january/\">Xamarin and .NET Community Events in January</a>",
+          "Id": "a973c455-a176-4c7d-8ae1-5cae00bdfd6b",
+          "Position": 2
+        },
+        {
+          "Content": "On MSDN, Kazuki Ota explains how to <a href=\"http://blogs.msdn.microsoft.com/appconsult/2018/12/18/add-ai-feature-on-xamarin-forms-app/\" data-mce-href=\"http://blogs.msdn.microsoft.com/appconsult/2018/12/18/add-ai-feature-on-xamarin-forms-app/\">Add AI feature to Xamarin.Forms app</a>",
+          "Id": "c392cae1-8071-4403-9549-130f45a95b93",
+          "Position": 3
+        },
+        {
+          "Content": "On Channel 9, James Montemagno (<a href=\"https://twitter.com/JamesMontemagno\" data-mce-href=\"https://twitter.com/JamesMontemagno\">@JamesMontemagno</a>) talks about <a href=\"https://channel9.msdn.com/Shows/XamarinShow/Best-Practices-for-User-Interface-Automation\" data-mce-href=\"https://channel9.msdn.com/Shows/XamarinShow/Best-Practices-for-User-Interface-Automation\">Best Practices for User Interface Automation</a>",
+          "Id": "36513202-7177-4bb8-917a-d30c1a88b1ec",
+          "Position": 4
+        }
+      ],
+      "Keywords": [
+        "\"App Service\"",
+        "\"Notification Hubs\"",
+        "\"Mobile apps\"",
+        "\"mobile app\"",
+        "\"API apps\"",
+        "\"Visual Studio App Centre\"",
+        "\"VS App Centre\"",
+        "\"Xamarin\"",
+        "\"cloud-powered mobile app\"",
+        "smartphones"
+      ],
+      "Name": "Mobile",
+      "Position": 14
+    },
+    {
+      "Description": "ExpressRoute, Azure DNS, Virtual Network, Traffic Manager, Load Balancer, VPN Gateway, Application Gateway, Network Watcher",
+      "Id": "7c2b5631-fab5-494c-813a-0e5920e3797d",
+      "Items": [
+        {
+          "Content": "On the Azure blog, Ashish Chhabria (<a href=\"https://twitter.com/ashishc1\" data-mce-href=\"https://twitter.com/ashishc1\">@ashishc1</a>) announces <a href=\"https://azure.microsoft.com/blog/virtual-network-service-endpoints-for-serverless-messaging-and-big-data/\" data-mce-href=\"https://azure.microsoft.com/blog/virtual-network-service-endpoints-for-serverless-messaging-and-big-data/\">Virtual Network Service Endpoints for serverless messaging and big data generally available</a>",
+          "Id": "fe071c18-08db-4f98-93bb-0379c6f5ced2",
+          "Position": 0
+        }
+      ],
+      "Keywords": [
+        "\"ExpressRoute\"",
+        "\"Azure DNS\"",
+        "\"DNS\"",
+        "\"Virtual Network\"",
+        "\"VNet\"",
+        "\"Traffic Manager\"",
+        "\"Load Balancer\"",
+        "\"LB\"",
+        "\"VPN Gateway\"",
+        "\"Application Gateway\"",
+        "\"App Gateway\"",
+        "\"Network Watcher\"",
+        "networking",
+        "firewalls",
+        "\"affinity group\"",
+        "\"NSG\"",
+        "\"network security group\"",
+        "\"SSL offload\"",
+        "\"Web application firewall\"",
+        "firewall",
+        "\"WAN\""
+      ],
+      "Name": "Networking",
+      "Position": 15
+    },
+    {
+      "Description": "Azure Information Protection, Key Vault, Security Center, Azure DDoS Protection, Azure Advanced Threat Protection",
+      "Id": "dc801505-bcfc-4228-91a6-8efe5675beae",
+      "Items": [
+        {
+          "Content": "On TechNet, Yuri Diogenes (<a href=\"https://twitter.com/yuridiogenes\" data-mce-href=\"https://twitter.com/yuridiogenes\">@yuridiogenes</a>) presents: <a href=\"https://blogs.technet.microsoft.com/yuridiogenes/2018/12/31/2018-azure-securty-center-year-in-review/\" data-mce-href=\"https://blogs.technet.microsoft.com/yuridiogenes/2018/12/31/2018-azure-securty-center-year-in-review/\">2018: Azure Security Center Year in Review</a>",
+          "Id": "8661e39f-4211-4946-af19-bd8a08b18492",
+          "Position": 0
+        },
+        {
+          "Content": "On the Azure blog, Alice Kupcik announces <a href=\"https://azure.microsoft.com/blog/announcing-transparent-data-encryption-tde-with-customer-managed-keys-for-managed-instance/\" data-mce-href=\"https://azure.microsoft.com/blog/announcing-transparent-data-encryption-tde-with-customer-managed-keys-for-managed-instance/\">Transparent Data Encryption TDE with customer managed keys for Managed Instance</a>",
+          "Id": "b593caa9-6a05-415a-9bc1-c82c1b98ba69",
+          "Position": 1
+        },
+        {
+          "Content": "Also on TechNet, Stanislav Belov covers <a href=\"https://blogs.technet.microsoft.com/askpfeplat/2018/12/31/infrastructure-security-noteworthy-news-december-2018/\" data-mce-href=\"https://blogs.technet.microsoft.com/askpfeplat/2018/12/31/infrastructure-security-noteworthy-news-december-2018/\">Infrastructure + Security for December 2018</a>",
+          "Id": "3a211468-a685-472c-9d59-dd1542075362",
+          "Position": 2
+        },
+        {
+          "Content": "On MSDN, The Mvp Award Program presents: <a href=\"https://blogs.msdn.microsoft.com/mvpawardprogram/2018/12/21/friday-five-december-21/\" data-mce-href=\"https://blogs.msdn.microsoft.com/mvpawardprogram/2018/12/21/friday-five-december-21/\">Check out this weeks Friday Five on Dev Day Belgium, GDPR, and More</a>",
+          "Id": "72ec8a26-f474-47f9-ac67-7724e684cbb2",
+          "Position": 3
+        },
+        {
+          "Content": "On Code Project, Allen O'Neil (<a href=\"https://twitter.com/ajsondev\" data-mce-href=\"https://twitter.com/ajsondev\">@ajsondev</a>) talks about <a href=\"https://www.codeproject.com/Articles/1272653/Policy-management-with-Azure\" data-mce-href=\"https://www.codeproject.com/Articles/1272653/Policy-management-with-Azure\">Policy management with Azure</a>",
+          "Id": "4760dfcd-aa59-4a31-b2a6-b7ac9388099b",
+          "Position": 4
+        },
+        {
+          "Content": "James van Den Berg discusses <a href=\"https://mountainss.wordpress.com/2018/12/16/managing-and-working-with-azure-network-security-groups-nsg-security-iac-azuredevops/\" data-mce-href=\"https://mountainss.wordpress.com/2018/12/16/managing-and-working-with-azure-network-security-groups-nsg-security-iac-azuredevops/\">Managing and Working with Azure Network Security Groups NSG Security IaC AzureDevOps</a>",
+          "Id": "ab976ea8-016e-451b-9757-299ff0ccc06b",
+          "Position": 5
+        }
+      ],
+      "Keywords": [
+        "\"Information Protection\"",
+        "\"Key Vault\"",
+        "\"KV\"",
+        "\"Security Center\"",
+        "\"Security Centre\"",
+        "\"DDoS\"",
+        "\"DDoS Protection\"",
+        "\"Advanced Threat Protection\"",
+        "protection",
+        "defense",
+        "defence",
+        "threats"
+      ],
+      "Name": "Security",
+      "Position": 16
+    },
+    {
+      "Description": "Storage, StorSimple, Data Lake Store, Blob Storage, Disk Storage, Managed Disks, Queue Storage, File Storage, Storage Explorer, Archive Storage",
+      "Id": "5e9caab7-12c0-4b7a-9570-98eb30c5d03e",
+      "Items": [
+        {
+          "Content": "Gregor Suttie (<a href=\"https://twitter.com/gregor_suttie\" data-mce-href=\"https://twitter.com/gregor_suttie\">@gregor_suttie</a>) discusses <a href=\"https://gregorsuttie.com/2018/12/23/azure-blobs-from-c-and-visual-studio-c-advent-calendar/\" data-mce-href=\"https://gregorsuttie.com/2018/12/23/azure-blobs-from-c-and-visual-studio-c-advent-calendar/\">Azure Blobs from C# and Visual Studio</a>",
+          "Id": "c69355e2-4902-46d3-824f-ec0ab3136563",
+          "Position": 0
+        },
+        {
+          "Content": "On TechNet, Muhammad Raslan explains how to <a href=\"https://blogs.technet.microsoft.com/meamcs/2018/12/23/publish-your-home-internet-connection-ip-address-using-azure-blobs-part-1/\" data-mce-href=\"https://blogs.technet.microsoft.com/meamcs/2018/12/23/publish-your-home-internet-connection-ip-address-using-azure-blobs-part-1/\">Publish Your Home Internet Connection IP Address Using Azure Blobs (Part 1)</a>",
+          "Id": "1a3a5926-4e7b-4481-b5db-8b4a8a9096ee",
+          "Position": 1
+        },
+        {
+          "Content": "On Channel 9, Cale Teeter (<a href=\"https://twitter.com/Windozer\" data-mce-href=\"https://twitter.com/Windozer\">@Windozer</a>) talks about <a href=\"https://channel9.msdn.com/Shows/Blocktalk/IPFS-in-Azure\" data-mce-href=\"https://channel9.msdn.com/Shows/Blocktalk/IPFS-in-Azure\">IPFS in Azure</a>",
+          "Id": "29f6fd4d-c6bc-4d4f-9db3-127ba3583dd8",
+          "Position": 2
+        },
+        {
+          "Content": "On MSDN, Arsen Vladimirskiy (<a href=\"https://twitter.com/ArsenVlad\" data-mce-href=\"https://twitter.com/ArsenVlad\">@ArsenVlad</a>) talks about <a href=\"https://blogs.msdn.microsoft.com/arsen/2018/12/27/using-snowflake-on-azure-for-querying-azure-event-hubs-capture-avro-files/\" data-mce-href=\"https://blogs.msdn.microsoft.com/arsen/2018/12/27/using-snowflake-on-azure-for-querying-azure-event-hubs-capture-avro-files/\">Using Snowflake on Azure for Querying Azure Event Hubs Capture Avro Files</a>",
+          "Id": "c965ea2c-c2cc-400a-9276-e72509724eac",
+          "Position": 3
+        },
+        {
+          "Content": "Charbel Nemnom (<a href=\"https://twitter.com/charbelnemnom\" data-mce-href=\"https://twitter.com/charbelnemnom\">@charbelnemnom</a>) describes <a href=\"https://charbelnemnom.com/2018/12/how-to-mount-and-persist-an-azure-file-share-with-windows-azurefiles-azurefilesync/\" data-mce-href=\"https://charbelnemnom.com/2018/12/how-to-mount-and-persist-an-azure-file-share-with-windows-azurefiles-azurefilesync/\">How To Mount And Persist An Azure File Share With Windows AzureFiles AzureFileSync</a>",
+          "Id": "f68ec9e7-8ad0-4835-a2a4-06cb321924d0",
+          "Position": 4
+        },
+        {
+          "Content": "On the Revolution Analytics blog, Hong Ooi blogs about <a href=\"https://blog.revolutionanalytics.com/2018/12/azurestor.html\" data-mce-href=\"https://blog.revolutionanalytics.com/2018/12/azurestor.html\">AzureStor: an R package for working with Azure storage</a>",
+          "Id": "bbfafbc5-22bc-4fd4-a2cb-a06935eef25c",
+          "Position": 5
+        },
+        {
+          "Content": "Sam Cogan (<a href=\"https://twitter.com/samcogan\" data-mce-href=\"https://twitter.com/samcogan\">@samcogan</a>) covers <a href=\"https://samcogan.com/updating-packer-builds-to-use-managed-disks/\" data-mce-href=\"https://samcogan.com/updating-packer-builds-to-use-managed-disks/\">Updating Packer Builds to Use Managed Disks</a>",
+          "Id": "28a5b405-c7ec-4e3b-87c7-01e9f970079d",
+          "Position": 6
+        },
+        {
+          "Content": "On the MSSQL Tips site, AUTHOR explains <a href=\"http://feedproxy.google.com/~r/MSSQLTips-LatestSqlServerTips/~3/_rwOGIZ1eic/\" data-mce-href=\"http://feedproxy.google.com/~r/MSSQLTips-LatestSqlServerTips/~3/_rwOGIZ1eic/\">How To Schedule SQL Scripts On SQL Server Express Edition</a>",
+          "Id": "be99e980-0f57-11e9-b72e-2fa8cf86ebed",
+          "Position": 7
+        }
+      ],
+      "Keywords": [
+        "\"Storage\"",
+        "\"StorSimple\"",
+        "\"Data Lake Store\"",
+        "\"DLS\"",
+        "\"Blob Storage\"",
+        "\"Disk Storage\"",
+        "\"Managed Disks\"",
+        "\"Queue Storage\"",
+        "\"File Storage\"",
+        "\"Storage Explorer\"",
+        "\"Archive Storage\"",
+        "blob",
+        "\"block blob\"",
+        "\"storage account\"",
+        "\"Shared Access Signature\"",
+        "\"azure files\"",
+        "\"import service\"",
+        "\"export service\"",
+        "\"storage client library\"",
+        "\"azcopy\""
+      ],
+      "Name": "Storage",
+      "Position": 17
+    },
+    {
+      "Description": "App Service (Web), API Management, Content Delivery Network, Azure Search, Web apps, Azure SignalR Service",
+      "Id": "f926b8a8-b03c-40f2-ba69-94d23df687ae",
+      "Items": [
+        {
+          "Content": "On the Tech Radar site, Mike Williamsdesire Athow blogs about <a href=\"http://feedproxy.google.com/~r/techradar/allnews/~3/isCcWKGb6TI/the-best-cdns-of-2018\" data-mce-href=\"http://feedproxy.google.com/~r/techradar/allnews/~3/isCcWKGb6TI/the-best-cdns-of-2018\">The best CDN providers of 2019 to speed up any website</a>",
+          "Id": "3c753390-167a-4801-a007-62b20b537bb7",
+          "Position": 0
+        },
+        {
+          "Content": "Shahed Chowdhuri (<a href=\"https://twitter.com/shahedC\" data-mce-href=\"https://twitter.com/shahedC\">@shahedC</a>) writes about <a href=\"https://wakeupandcode.com/real-time-asp-net-core-web-apps-with-signalr/\" data-mce-href=\"https://wakeupandcode.com/real-time-asp-net-core-web-apps-with-signalr/\">Real-time ASP .NET Core Web Apps with SignalR</a>",
+          "Id": "897c5a7c-4353-48f3-83e8-12f1f68ea7ed",
+          "Position": 1
+        },
+        {
+          "Content": "On Code Project, Prabakaran Rajendran (<a href=\"https://twitter.com/rajpraba_1986\" data-mce-href=\"https://twitter.com/rajpraba_1986\">@rajpraba_1986</a>) explains how to <a href=\"https://www.codeproject.com/Articles/1272730/Create-Build-and-Deploy-ASP-NET-Core-MVC-App-to-Az\" data-mce-href=\"https://www.codeproject.com/Articles/1272730/Create-Build-and-Deploy-ASP-NET-Core-MVC-App-to-Az\">Create, Build and Deploy ASP.NET Core MVC App to Azure App Services</a>",
+          "Id": "e74ca04a-5edb-40c2-8ada-10fe8edf4160",
+          "Position": 2
+        }
+      ],
+      "Keywords": [
+        "\"App Service\"",
+        "\"API Management\"",
+        "\"APIM\"",
+        "\"API-M\"",
+        "\"Content Delivery Network\"",
+        "CDN",
+        "\"Azure Search\"",
+        "\"Web apps\"",
+        "\"Web App\"",
+        "\"management API\"",
+        "\"OpenAPI\"",
+        "\"azure webapps\"",
+        "\"web job\"",
+        "webjob",
+        "PHP",
+        "Java",
+        "nodejs",
+        "\"LOB app\"",
+        "\"package restore\"",
+        "\"ASP.NET\"",
+        "\"SignalR\""
+      ],
+      "Name": "Web",
+      "Position": 18
+    }
+  ]
+}
