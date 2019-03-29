@@ -1,6 +1,6 @@
 #n Wyam.Razor
 
-#a "C:\_Projects\Products\Endjin.ContentPlatform\Solutions\Endjin.Content.StaticSiteGenerator\bin\Debug\netstandard2.0\Endjin.Content.StaticSiteGenerator.dll"
+#a "..\Solutions\Endjin.AzureWeekly.Wyam\bin\Debug\netstandard2.0\Endjin.AzureWeekly.WyamModules.dll"
 
 #theme PowerBIWeekly
 
@@ -12,5 +12,7 @@ string contentPackagePath = @"..\Artefacts\ContentPackages\aw";
 Pipelines.Add(
     "IndexPage",
     GetContentPackagesForFrontPage(contentPackagePath),
-    Razor().WithLayout("/PowerBIWeekly/_Layout.cshtml"),
-    WriteFiles((doc, ctx) => "index.html"));
+    Razor()
+        //.WithLayout("/PowerBIWeekly/Shared/_Layout.cshtml")
+        .WithLayout("/PowerBIWeekly/_Index.cshtml"),
+    WriteFiles((doc, ctx) =>"index.html"));

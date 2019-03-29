@@ -1,4 +1,8 @@
-﻿<div class="register">
+﻿@{
+    Layout = "_Layout.cshtml";
+}
+
+<div class="register">
         <form id="subForm" class="form-inline" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="2BE4EF332AA2E32596E38B640E9056194E621132DE1FED3C4CC65C0B9F6E5E8A04061FB225886F80F841FA251327AFC2965CB5E45E407D16555EF447BFCCE524">
             <div class="form-group row">
                 <input id="fieldEmail" name="cm-ejtkry-ejtkry" type="email" class="form-control" placeholder="Enter email" required  />
@@ -69,4 +73,19 @@
             <p>please email <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#112;&#111;&#119;&#101;&#114;&#098;&#105;&#119;&#101;&#101;&#107;&#108;&#121;&#064;&#101;&#110;&#100;&#106;&#105;&#110;&#046;&#099;&#111;&#109;">&#112;&#111;&#119;&#101;&#114;&#098;&#105;&#119;&#101;&#101;&#107;&#108;&#121;&#064;&#101;&#110;&#100;&#106;&#105;&#110;&#046;&#099;&#111;&#109;</a></p>
         </div>
     </div>
+</div>
+
+@RenderBody()
+
+<div class="content2">
+@foreach(var contentPackage in Model.List<ContentPackage>("ContentPackages"))
+{
+    <div class="row">
+        <div class="contribute">
+            <h2>Newsletter</h2>
+            <p>If you would like to contribute any content to the Power BI Weekly newsletter,</p>
+            <p>please email <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#112;&#111;&#119;&#101;&#114;&#098;&#105;&#119;&#101;&#101;&#107;&#108;&#121;&#064;&#101;&#110;&#100;&#106;&#105;&#110;&#046;&#099;&#111;&#109;">&#112;&#111;&#119;&#101;&#114;&#098;&#105;&#119;&#101;&#101;&#107;&#108;&#121;&#064;&#101;&#110;&#100;&#106;&#105;&#110;&#046;&#099;&#111;&#109;</a></p>
+        </div>
+    </div>
+}
 </div>

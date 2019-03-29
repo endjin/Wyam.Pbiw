@@ -26,15 +26,12 @@
                 contentPackages.Add(JsonConvert.DeserializeObject<ContentPackage>(File.ReadAllText(filePath)));
             }
 
-            foreach (var contentPackage in contentPackages.OrderByDescending(x => x.Issue).Take(4))
+            var metadata = new List<KeyValuePair<string, object>>
             {
-                var metadata = new List<KeyValuePair<string, object>>
-                {
-                    new KeyValuePair<string, object>("ContentPackage", contentPackage),
-                };
+                new KeyValuePair<string, object>("ContentPackages", contentPackages.OrderByDescending(x => x.Issue).Take(4)),
+            };
 
-                yield return context.GetDocument(metadata);
-            }
+            yield return context.GetDocument(metadata);
         }
     }
 }
