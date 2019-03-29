@@ -13,6 +13,10 @@ Pipelines.Add(
     "IndexPage",
     GetContentPackagesForFrontPage(contentPackagePath),
     Razor()
-        //.WithLayout("/PowerBIWeekly/Shared/_Layout.cshtml")
-        .WithLayout("/PowerBIWeekly/_Index.cshtml"),
+        .WithLayout("_Index.cshtml"),
     WriteFiles((doc, ctx) =>"index.html"));
+
+Pipelines.Add(
+    "CopyAssets",
+    CopyFiles("**/*{!.cshtml,.*}")
+);
