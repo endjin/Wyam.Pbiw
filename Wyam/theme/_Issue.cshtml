@@ -68,24 +68,24 @@
 </div>
 
 <div class="content2">
-@foreach(var contentPackage in Model.List<ContentPackage>("ContentPackages"))
-{
+@{ var contentPackage = Model.Get<ContentPackage>("ContentPackage");}
     <div class="row">
         <div>
-            <h2>Issue @contentPackage.Issue:  @contentPackage.FromDate.ToString("dd/MM/yyyy") - @contentPackage.ToDate.ToString("dd/MM/yyyy")</h2>
             @Html.Raw(@contentPackage.Editorial)
-            <p><a href="issue-@(contentPackage.Issue).html">Read the full newsletter</a></p>
         </div>
     </div>
-}
-</div>
-
-<div class="content2">
+    @foreach(var group in contentPackage.Groups){
     <div class="row">
-        <div class="contribute">
-            <h2>Contribute</h2>
-            <p>If you would like to contribute any content to the Power BI Weekly newsletter,</p>
-            <p>please email <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#112;&#111;&#119;&#101;&#114;&#098;&#105;&#119;&#101;&#101;&#107;&#108;&#121;&#064;&#101;&#110;&#100;&#106;&#105;&#110;&#046;&#099;&#111;&#109;">&#112;&#111;&#119;&#101;&#114;&#098;&#105;&#119;&#101;&#101;&#107;&#108;&#121;&#064;&#101;&#110;&#100;&#106;&#105;&#110;&#046;&#099;&#111;&#109;</a></p>
+        <div>
+            <h2>@group.Name</h2>
+            <p><strong>Covering:</strong> @group.Description</p>
+            <ul>
+            @foreach (var item in group.Items)
+            {
+                <li>@Html.Raw(@item.Content)</li>
+            }
+            </ul>
         </div>
     </div>
+    }
 </div>

@@ -1,4 +1,5 @@
 #n Wyam.Razor
+#n Endjin.AzureWeekly.WyamModules
 
 #a "..\Solutions\Endjin.AzureWeekly.Wyam\bin\Debug\netstandard2.0\Endjin.AzureWeekly.WyamModules.dll"
 
@@ -15,6 +16,13 @@ Pipelines.Add(
     Razor()
         .WithLayout("_Index.cshtml"),
     WriteFiles((doc, ctx) =>"index.html"));
+
+Pipelines.Add(
+    "Issues",
+    GetAllContentPacks(contentPackagePath),
+    Razor()
+        .WithLayout("_Issue.cshtml"),
+    WriteFiles((doc, ctx) => "issue-" + doc.Get<ContentPackage>("ContentPackage").Issue + ".html"));
 
 Pipelines.Add(
     "CopyAssets",

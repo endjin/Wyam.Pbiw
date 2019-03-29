@@ -7,11 +7,11 @@
     using Wyam.Common.Execution;
     using Wyam.Common.Modules;
 
-    public class GetAllContentPacksModule : IModule
+    public class GetAllContentPacks : IModule
     {
         private string contentPackageDirectory;
 
-        public GetAllContentPacksModule(string contentPackageDirectory)
+        public GetAllContentPacks(string contentPackageDirectory)
         {
             this.contentPackageDirectory = contentPackageDirectory;
         }
