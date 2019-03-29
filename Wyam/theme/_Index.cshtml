@@ -84,6 +84,7 @@
         <div class="contribute">
             <h2>Issue @contentPackage.Issue:  @contentPackage.FromDate.ToString("dd/MM/yyyy") - @contentPackage.ToDate.ToString("dd/MM/yyyy")</h2>
             @Html.Raw(@contentPackage.Editorial)
+            <p><a href="issue-@(contentPackage.Issue).html">Read the full newsletter</a></p>
         </div>
     </div>
 }
